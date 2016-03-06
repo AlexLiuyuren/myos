@@ -8,15 +8,19 @@
  * You can also implement a simplier version
  * by yourself.
  */
+/*void cputchar(int c){
+	cons_putc(c);
+}*/
+void serial_printc(char);
 
 static void
-/*putch(int ch, int *cnt){
-	cputchar(ch);
-	*cnt++;
-}*/
+putch(int ch, int *cnt){
+	serial_printc(ch);
+	(*cnt)++;
+}
 
 
-int	vprintk(const char *fmt,va_list ap){ 
+int vprintk(const char *fmt,va_list ap){ 
 	//hlt();
 	/*
 	 * uncomment the hlt()
@@ -28,11 +32,11 @@ int	vprintk(const char *fmt,va_list ap){
 	return cnt;
 }
 
-int vcprintf(const char *fmt, va_list ap){
+/*int vcprintf(const char *fmt, va_list ap){
 	int cnt=0;
 	vprintfmt((void*)putch,&cnt,fmt,ap);
 	return cnt;
-}
+}*/
 
 int	printk(const char *fmt, ...){
 	//hlt();
@@ -48,7 +52,7 @@ int	printk(const char *fmt, ...){
 	va_list ap;
 	int cnt;
 	va_start(ap,fmt);
-	cnt=vcprintf(fmt,ap);
+	cnt=vprintk(fmt,ap);
 	va_end(ap);
 	return cnt;
 }

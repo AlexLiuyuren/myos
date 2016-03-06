@@ -263,6 +263,7 @@ breakpoint	include/x86.h	/^breakpoint(void)$/;"	f
 buf	lib/printfmt.c	/^	char *buf;$/;"	m	struct:sprintbuf	file:
 cnt	lib/printfmt.c	/^	int cnt;$/;"	m	struct:sprintbuf	file:
 cpuid	include/x86.h	/^cpuid(uint32_t info, uint32_t *eaxp, uint32_t *ebxp, uint32_t *ecxp, uint32_t *edxp)$/;"	f
+cputchar	kernel/printk.c	/^void cputchar(int c){$/;"	f
 disable_interrupt	include/x86.h	/^disable_interrupt(void){$/;"	f
 display_buffer	kernel/device/video.c	/^display_buffer(void) {$/;"	f
 do_keyboard	kernel/irq/irq_handle.c	/^static void (*do_keyboard)(int);$/;"	v	file:
@@ -468,7 +469,7 @@ vbuf	kernel/device/video.c	/^static uint8_t vbuf[SCR_SIZE];$/;"	v	file:
 version	boot/boot.h	/^	unsigned int   version;$/;"	m	struct:ELFHeader
 vmem	kernel/device/video.c	/^uint8_t *vmem = VMEM_ADDR;$/;"	v
 vprintfmt	lib/printfmt.c	/^vprintfmt(void (*putch)(int, void*), void *putdat, const char *fmt, va_list ap)$/;"	f
-vprintk	kernel/printk.c	/^int	vprintk(const char *fmt,va_list ap){ $/;"	f
+vprintk	kernel/printk.c	/^int vprintk(const char *fmt,va_list ap){ $/;"	f
 vref	kernel/device/video.c	/^static uint8_t vref[SCR_SIZE];$/;"	v	file:
 vsnprintf	lib/printfmt.c	/^vsnprintf(char *buf, int n, const char *fmt, va_list ap)$/;"	f
 waitdisk	boot/main.c	/^waitdisk(void) {$/;"	f

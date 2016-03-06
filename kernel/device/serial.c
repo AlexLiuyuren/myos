@@ -1,5 +1,5 @@
 #include "include/x86.h"
-
+#include "boot/boot.h"
 #define SERIAL_PORT  0x3F8
 
 void
@@ -23,5 +23,6 @@ serial_printc(char ch) {
 	/*
 	 * implement this function
 	 */
-	;
+	while(serial_idle()!= true);
+	out_byte(SERIAL_PORT,ch);
 }

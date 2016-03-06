@@ -23,11 +23,18 @@ bootmain(void) {
 	elf = (struct ELFHeader*)0x8000;
 
 	/* 读入ELF文件头 */
-
+	readseg((unsigned char*)elf,4096,0);
 	/* 把每个program segement依次读入内存 */
-
+	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
+	eph=ph+elf->phnum;
+	for(;ph<eph;ph++){
+	pa=(unsigned char*)ph->paddr;
+	readseg(pa,ph->filesz,ph->off);
+	for(i=pa+ph->filesz;i<pa+ph->memsz;*i++=0);
+	}
 	/*跳转到程序中*/
-	asm volatile("hlt");
+	//asm volatile("hlt");
+	((void(*)(void))elf->entry)();
 
 }
 

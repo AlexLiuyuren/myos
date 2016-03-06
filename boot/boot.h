@@ -33,11 +33,10 @@ struct ProgramHeader {
 static inline char
 in_byte(short port) {
 	char data;
-	__asm__ __volatile__(
-	"in %1, %%al"
+	asm volatile(
+	"in %1, %0"
 	:"=a"(data)
-	:"g"(port)
-	:"memory"
+	:"d"(port)
 	);
 	/*请自行加入内联汇编代码*/
 	return data;
@@ -46,9 +45,9 @@ static inline int
 in_long(short port) {
 	int data;
 	__asm__ __volatile__(
-	"in %1, %%eax"
+	"in %1, %0"
 	:"=a"(data)
-	:"g"(port)
+	:"d"(port)
 	:"memory"
 	);
 	return data;
@@ -57,10 +56,9 @@ static inline void
 out_byte(short port, char data) {
 	/*请自行加入内联汇编代码*/
 	__asm__ __volatile__(
-	"move %1, %%al\n\t"\
-	"out %%al, %0"
+	"out %1, %0"
 	:
-	:"g"(port),"g"(data)
+	:"d"(port),"a"(data)
 	:"memory"	
 	);
 
