@@ -34,6 +34,7 @@ set_trap(struct GateDescriptor *ptr, uint32_t selector, uint32_t offset, uint32_
 
 /* 这些函数是汇编代码 */
 void irq0();
+void irq1();
 void vec0();
 void vec1();
 void vec2();
@@ -50,6 +51,14 @@ void vec12();
 void vec13();
 
 void irq_empty();
+
+static inline void save_idt(void *addr, uint32_t size){
+	static volatile uint16_t data[3];
+	data[0]=size-1;
+	data[1]=(uint32_t)addr;
+	data[2]=((uint32_t)addr)>>16;
+	asm volatile("lidt (%0)"::"r"(data));
+}
 
 void init_idt() {
 	int i;
@@ -76,13 +85,14 @@ void init_idt() {
 
 	/* 设置外部中断的处理 */
 	set_intr(idt + 32, SEG_KERNEL_CODE, (uint32_t)irq0, DPL_KERNEL);
+	set_intr(idt + 32+1, SEG_KERNEL_CODE, (uint32_t)irq1, DPL_KERNEL);
 
 	/* 写入IDT,请自行根据i386手册完成save_idt函数,
 	 * x86.h提供了相关内联汇编的支持
 	 * 然后将hlt()删除
 	 * 
 	 * */
-	hlt();
-	//save_idt(idt, sizeof(idt));
+	//hlt();
+	save_idt(idt, sizeof(idt));
 }
 

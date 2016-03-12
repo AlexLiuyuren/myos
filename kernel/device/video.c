@@ -56,6 +56,48 @@ void
 blue_screen(){
 	memset((void *)vmem,1,SCR_SIZE);
 }
+int quater_width=SCR_HEIGHT/4;
+int quater_height=SCR_HEIGHT/4;
+int last_row=SCR_HEIGHT*4/5;
+int last_line=SCR_HEIGHT*4/5;
+int line_width=4;
+int line_num=4;
+int row_width=4;
+int row_num=4;
 
+void draw_border(void){
+	int i,j,k;
+	for(i=0;i<row_num;i++){
+		for(j=0;j<row_width;j++){
+		for(k=0;k<last_line;k++){
+		vbuf[i*quater_height*SCR_WIDTH+j*SCR_WIDTH+k]=1;
+	}
+	}
+	}
+	for(i=0;i<last_row;i++){
+		for(j=0;j<line_num;j++){
+			for(k=0;k<line_width;k++)
+			vbuf[i*SCR_WIDTH+j*quater_width+k]=1;
+		}
+	}
+
+}
+
+void draw_block(int index,uint8_t color){
+	assert((index<10)&&(index>0));
+	int row=(index-1)/3;
+	int line=index%3;
+	if(line==0)
+		line+=3;
+	line-=1;//line和row都从0开始
+	int start_place=row*(quater_height)*SCR_WIDTH+row_width*SCR_WIDTH+quater_width+line_width;
+	int i,j;
+	for(i=0;i<quater_height-4;i++){
+	for(j=start_place+i*SCR_WIDTH;j<start_place+i*SCR_WIDTH+quater_width-line_width;j++){
+	vbuf[j]=color;
+	}
+	}
+
+}
 
 	
