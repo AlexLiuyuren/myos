@@ -25,19 +25,27 @@ void init_game(){
 	printk("game start!\n");
 
 }
+void sleep(int time){
+	int old_tick=tick;
+	while(tick-old_tick<time*100);
+}
 
 int main(){
 //	blue_screen();
-	init_game();
 	while(1){
+		init_game();
+		black_screen();
 		prepare_buffer();
 		draw_border();
 		display_buffer();
-		draw_block(9,15);
-		display_buffer();
+		//draw_block(1,15);
+		//display_buffer();
 		enable_interrupt();
 		//assert(0);
-		hlt();
+		//hlt();
+		init_block();
+		game_loop();
+		sleep(2);
 	}
 	return 0;
 }

@@ -22,6 +22,7 @@ static uint8_t vref[SCR_SIZE];
 void
 prepare_buffer(void) {
 #ifdef PARTIAL_UPDATE
+	memset(vbuf,0,SCR_SIZE);
 	memcpy(vref, vbuf, SCR_SIZE);
 #endif
 	vmem = vbuf;
@@ -55,6 +56,18 @@ display_buffer(void) {
 void
 blue_screen(){
 	memset((void *)vmem,1,SCR_SIZE);
+}
+void
+white_screen(){
+	memset((void *)vmem,15,SCR_SIZE);
+}
+void
+black_screen(){
+	memset((void *)vmem,0,SCR_SIZE);
+}
+void
+yellow_screen(){
+	memset((void *)vmem,14,SCR_SIZE);
 }
 int quater_width=SCR_HEIGHT/4;
 int quater_height=SCR_HEIGHT/4;
@@ -90,7 +103,7 @@ void draw_block(int index,uint8_t color){
 	if(line==0)
 		line+=3;
 	line-=1;//line和row都从0开始
-	int start_place=row*(quater_height)*SCR_WIDTH+row_width*SCR_WIDTH+quater_width+line_width;
+	int start_place=row*(quater_height)*SCR_WIDTH+row_width*SCR_WIDTH+line_width+line*quater_width;
 	int i,j;
 	for(i=0;i<quater_height-4;i++){
 	for(j=start_place+i*SCR_WIDTH;j<start_place+i*SCR_WIDTH+quater_width-line_width;j++){

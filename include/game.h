@@ -23,5 +23,8 @@ int last_key_code(void);
 /* 随机数 */
 int rand(void);
 void srand(int seed);
+/*about game*/
+void init_block();
+void game_loop();
 
 #endif
