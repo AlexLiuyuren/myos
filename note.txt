@@ -46,6 +46,9 @@ kbdreg.h
 keyboard.h
 设置键盘中断的处理函数
 
+game.h
+declare functions used in game.
+
 mmu.h
 memory management unit
 定义了宏

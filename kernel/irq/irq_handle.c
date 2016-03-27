@@ -19,6 +19,9 @@ set_keyboard_intr_handler( void (*ptr)(int) ) {
  * 请仔细理解这段程序的含义，这些内容将在后续的实验中被反复使用。 */
 void
 irq_handle(struct TrapFrame *tf) {
+	if(tf->irq==0x80){
+		do_syscall(tf);
+	}
 	if(tf->irq < 1000) {
 		if(tf->irq == -1) {
 			printk("%s, %d: Unhandled exception!\n", __FUNCTION__, __LINE__);

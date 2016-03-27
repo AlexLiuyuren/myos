@@ -31,18 +31,13 @@ void sleep(int time){
 }
 
 int main(){
-//	blue_screen();
 	while(1){
 		init_game();
 		black_screen();
 		prepare_buffer();
 		draw_border();
 		display_buffer();
-		//draw_block(1,15);
-		//display_buffer();
 		enable_interrupt();
-		//assert(0);
-		//hlt();
 		init_block();
 		game_loop();
 		sleep(2);
