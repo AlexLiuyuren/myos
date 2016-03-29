@@ -1,7 +1,7 @@
 #include "include/types.h"
 #include "include/string.h"
 #include "include/video.h"
-
+#include "include/system.h"
 /* 绘制屏幕的帧缓冲实现。
  * 在某些版本的qemu-kvm上，由于每次访问显存映射区域都会产生一次VM exit，
  * 更新屏幕的速度可能非常缓慢从而引起游戏跳帧。定义宏SLOW以只重绘屏幕变化
@@ -35,16 +35,20 @@ display_buffer(void) {
 	int i;
 	uint32_t *buf = (uint32_t*)vbuf;
 	uint32_t *ref = (uint32_t*)vref;
-	uint32_t *mem = (uint32_t*)VMEM_ADDR;
-	vmem = VMEM_ADDR;
 	for (i = 0; i < SCR_SIZE / 4; i ++) {
 		if (buf[i] != ref[i]) {
-			mem[i] = buf[i];
+			//mem[i] = buf[i];
+			//printk("displaybuffer\n");
+			system_draw_pixel_off(drawpixeloff,i,buf[i]);
+			ref[i]=buf[i];
 		}
 	}
 #else
-	vmem = VMEM_ADDR;
-	asm volatile ("cld; rep movsl" : : "c"(SCR_SIZE / 4), "S"(vbuf), "D"(vmem));
+	//asm volatile ("cld; rep movsl" : : "c"(SCR_SIZE / 4), "S"(vbuf), "D"(vmem));
+	for(i=0;i<SCR_SIZE/4;i++){
+		system_draw_pixel_off(drawpixeloff,i,buf[i]);
+			//printk("displaybuffer\n");
+	}
 #endif
 }
 
@@ -55,19 +59,23 @@ display_buffer(void) {
  */
 void
 blue_screen(){
-	memset((void *)vmem,1,SCR_SIZE);
+	//memset((void *)vmem,1,SCR_SIZE);
+	system_clear_screen(clearscreen,1);
 }
 void
 white_screen(){
-	memset((void *)vmem,15,SCR_SIZE);
+	//memset((void *)vmem,15,SCR_SIZE);
+	system_clear_screen(clearscreen,15);
 }
 void
 black_screen(){
-	memset((void *)vmem,0,SCR_SIZE);
+	//memset((void *)vmem,0,SCR_SIZE);
+	system_clear_screen(clearscreen,0);
 }
 void
 yellow_screen(){
-	memset((void *)vmem,14,SCR_SIZE);
+	//memset((void *)vmem,14,SCR_SIZE);
+	system_clear_screen(clearscreen,14);
 }
 int quater_width=SCR_HEIGHT/4;
 int quater_height=SCR_HEIGHT/4;

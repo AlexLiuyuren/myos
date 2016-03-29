@@ -85,9 +85,9 @@ DEPS := $(shell find -name "*.d")
 -include $(DEPS)
 
 .PHONY: qemu debug gdb clean
-
+#-d int
 qemu: $(IMAGE)
-	$(QEMU) $(QEMU_OPTIONS) $(IMAGE)
+	$(QEMU)  $(QEMU_OPTIONS) $(IMAGE)
 
 # Faster, but not suitable for debugging
 qemu-kvm: $(IMAGE)

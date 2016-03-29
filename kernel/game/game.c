@@ -2,7 +2,7 @@
 #include "./include/x86.h"
 #include "./include/video.h"
 #include "./include/game.h"
-
+#include "kernel/game/include/printg.h"
 //void serial_printc(int);
 //void init_serial(void);
 
@@ -16,13 +16,14 @@ void timer_event(void){
 }
 
 void init_game(){
-	init_serial();
-	init_timer();
 	init_idt();
 	init_intr();
+	init_serial();
+	init_timer();
 	set_timer_intr_handler(timer_event);
 	set_keyboard_intr_handler(keyboard_event);
-	printk("game start!\n");
+	//while(1);
+	//printg("game start!\n");
 
 }
 void sleep(int time){
