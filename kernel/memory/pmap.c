@@ -22,8 +22,9 @@ enum {
 // These variables are set in mem_init()
 //pde_t *kern_pgdir;		// Kernel's initial page directory
 struct PageInfo pages[npages];		// Physical page state array
-static struct PageInfo *page_free_list;	// Free list of physical pages
+struct PageInfo *page_free_list;	// Free list of physical pages
 
+extern pde_t entry_pgdir[NPDENTRIES];
 bool empty_list(struct PageInfo*pt){
 	if(!pt){
 		return true;
@@ -306,4 +307,10 @@ tlb_invalidate(pde_t *pgdir, void *va)
 	// Flush the entry only if we're modifying the current address space.
 	// For now, there is only one address space, so always invalidate.
 	invlpg(va);
+}
+
+void init_mem(){
+	//tm create a mappting
+	boot_map_region(entry_pgdir,KERNBASE,npages*PGSIZE,0,PTE_W);
+	return ;
 }

@@ -1,28 +1,22 @@
-/* start.S的主要功能是切换在实模式工作的处理器到32位保护模式。为此需要设置正确的
- * GDT、段寄存器和CR0寄存器。C语言代码的主要工作是将磁盘上的内容装载到内存中去。
- * 磁盘镜像的结构如下：
-	 +-----------+------------------.        .-----------------+
-	 |   引导块   |  游戏二进制代码       ...        (ELF格式)     |
-	 +-----------+------------------`        '-----------------+
- * C代码将游戏文件整个加载到物理内存0x100000的位置，然后跳转到游戏的入口执行。至于为什么是0x100000，请参考游戏代码连接过程。 */
-
 #include "include/boot.h"
-
+#include "include/memlayout.h"
 #define SECTSIZE 512
 
 void readseg(unsigned char *, int, int);
-
+extern pte_t entry_pgdir[NPDENTRIES];
+extern struct PageInfo* page_free_list; 
 void
-bootmain(void) {
+loader(void) {
 	struct ELFHeader *elf;
 	struct ProgramHeader *ph, *eph;
 	unsigned char* pa, *i;
 
 	/* 因为引导扇区只有512字节，我们设置了堆栈从0x8000向下生长。
 	 * 我们需要一块连续的空间来容纳ELF文件头，因此选定了0x8000。 */
-	elf = (struct ELFHeader*)0x8000;
-
+	elf = (struct ELFHeader*)0xC0400000;
 	/* 读入ELF文件头 */
+	//pte_t *pte=pgdir_walk(entry_pgdir,elf,1);
+	//page_insert(entry_pgdir,page_free_list,(void *)elf,PTE_W|PTE_U|PTE_P);
 	readseg((unsigned char*)elf,4096,0);
 	/* 把每个program segement依次读入内存 */
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
@@ -70,4 +64,8 @@ readseg(unsigned char *pa, int count, int offset) {
 	offset = (offset / SECTSIZE) + 1;
 	for(; pa < epa; pa += SECTSIZE, offset ++)
 		readsect(pa, offset);
+}
+
+void readseg_va(uint32_t *va,int count,int offset){
+	
 }

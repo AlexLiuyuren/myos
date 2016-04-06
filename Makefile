@@ -1,5 +1,5 @@
-BOOT   := boot.bin
-KERNEL := kernel.bin
+BOOT   := bin.boot
+KERNEL := bin.kernel
 IMAGE  := disk.bin
 
 CC      := gcc
@@ -9,11 +9,12 @@ DD      := dd
 QEMU    := qemu-system-i386
 GDB     := gdb
 
-#CFLAGS := -Wall -Werror -Wfatal-errors #开启所有警告, 视警告为错误, 第一个错误结束编译
-CFLAGS := -Wall  -Wfatal-errors #开启所有警告, 视警告为错误, 第一个错误结束编译
+CFLAGS := -Wall -Werror -Wfatal-errors #开启所有警告, 视警告为错误, 第一个错误结束编译
+CFLAGS += -Wno-unused-function
+CFLAGS += -fno-stack-protector
 CFLAGS += -MD #生成依赖文件
 CFLAGS += -std=gnu11 -m32 -c #编译标准, 目标架构, 只编译
-CFLAGS += -I . #头文件搜索目录
+CFLAGS += -I. #头文件搜索目录
 CFLAGS += -O0 #不开优化, 方便调试
 CFLAGS += -fno-builtin #禁止内置函数
 CFLAGS += -ggdb3 #GDB调试信息
@@ -48,6 +49,7 @@ BOOT_O += $(BOOT_C:%.c=$(OBJ_DIR)/%.o)
 
 KERNEL_C := $(shell find $(KERNEL_DIR) -name "*.c")
 KERNEL_S := $(shell find $(KERNEL_DIR) -name "*.S")
+#KERNEL_S := $(wildcard $(KERNEL_DIR)/*.S)
 KERNEL_O := $(KERNEL_C:%.c=$(OBJ_DIR)/%.o)
 KERNEL_O += $(KERNEL_S:%.S=$(OBJ_DIR)/%.o)
 
@@ -85,10 +87,13 @@ $(OBJ_KERNEL_DIR)/%.o: $(KERNEL_DIR)/%.[cS]
 DEPS := $(shell find -name "*.d")
 -include $(DEPS)
 
-.PHONY: qemu debug gdb clean
-#-d int
+.PHONY: qemu debug gdb clean submit
+
 qemu: $(IMAGE)
-	$(QEMU)  $(QEMU_OPTIONS) $(IMAGE)
+	$(QEMU) $(QEMU_OPTIONS) $(IMAGE)
+
+qnx: $(IMAGE)
+	$(QEMU) $(IMAGE) -nographic -serial stdio
 
 # Faster, but not suitable for debugging
 qemu-kvm: $(IMAGE)
@@ -105,3 +110,5 @@ clean:
 	@rm -rf $(BOOT)    2> /dev/null
 	@rm -rf $(KERNEL)  2> /dev/null
 	@rm -rf $(IMAGE)   2> /dev/null
+submit: clean
+	cd .. && tar cvj $(shell pwd | grep -o '[^/]*$$') > 141242024.tar.bz2

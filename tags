@@ -4,15 +4,17 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOC_ZERO	include/pmap.h	/^	ALLOC_ZERO = 1<<0,$/;"	e	enum:__anon4
 ASM	lib/string.c	9;"	d	file:
-BLOCK	kernel/game/effect.c	/^}BLOCK;$/;"	t	typeref:struct:__anon2	file:
+BLOCK	game/effect.c	/^}BLOCK;$/;"	t	typeref:struct:__anon1	file:
 BOOT	Makefile	/^BOOT   := boot.bin$/;"	m
 BOOT_C	Makefile	/^BOOT_C := $(wildcard $(BOOT_DIR)\/*.c)$/;"	m
 BOOT_DIR	Makefile	/^BOOT_DIR       := boot$/;"	m
 BOOT_O	Makefile	/^BOOT_O := $(BOOT_S:%.S=$(OBJ_DIR)\/%.o)$/;"	m
 BOOT_S	Makefile	/^BOOT_S := $(wildcard $(BOOT_DIR)\/*.S)$/;"	m
 CC	Makefile	/^CC      := gcc$/;"	m
-CFLAGS	Makefile	/^CFLAGS := -Wall -Werror -Wfatal-errors #开启所有警告, 视警告为错误, 第一个错误结束编译$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -Wall  -Wfatal-errors #开启所有警告, 视警告为错误, 第一个错误结束编译$/;"	m
+CHECKSUM	kernel/entry.S	/^#define CHECKSUM (-(MULTIBOOT_HEADER_MAGIC + MULTIBOOT_HEADER_FLAGS))$/;"	d
 CMDBYTE	include/kbdreg.h	60;"	d
 CR0_AM	include/mmu.h	86;"	d
 CR0_CD	include/mmu.h	88;"	d
@@ -36,15 +38,23 @@ DD	Makefile	/^DD      := dd$/;"	m
 DEPS	Makefile	/^DEPS := $(shell find -name "*.d")$/;"	m
 DPL_KERNEL	include/mmu.h	134;"	d
 DPL_USER	include/mmu.h	135;"	d
-ELFHeader	boot/boot.h	/^struct ELFHeader {$/;"	s
-END	kernel/game/effect.c	/^}END;$/;"	t	typeref:struct:__anon3	file:
-E_BAD_ENV	lib/printfmt.c	/^	E_BAD_ENV	= 2,	\/\/ Environment doesn't exist or otherwise$/;"	e	enum:__anon4	file:
-E_FAULT	lib/printfmt.c	/^	E_FAULT		= 6,	\/\/ Memory fault$/;"	e	enum:__anon4	file:
-E_INVAL	lib/printfmt.c	/^	E_INVAL		= 3,	\/\/ Invalid parameter$/;"	e	enum:__anon4	file:
-E_NO_FREE_ENV	lib/printfmt.c	/^	E_NO_FREE_ENV	= 5,	\/\/ Attempt to create a new environment beyond$/;"	e	enum:__anon4	file:
-E_NO_MEM	lib/printfmt.c	/^	E_NO_MEM	= 4,	\/\/ Request failed due to memory shortage$/;"	e	enum:__anon4	file:
-E_NO_SYS	lib/printfmt.c	/^	E_NO_SYS	= 7,	\/\/ Unimplemented system call$/;"	e	enum:__anon4	file:
-E_UNSPECIFIED	lib/printfmt.c	/^	E_UNSPECIFIED	= 1,	\/\/ Unspecified or unknown problem$/;"	e	enum:__anon4	file:
+ELFHeader	include/boot.h	/^struct ELFHeader {$/;"	s
+END	game/effect.c	/^}END;$/;"	t	typeref:struct:__anon2	file:
+EXTPHYSMEM	include/memlayout.h	93;"	d
+E_BAD_ENV	kernel/memory/pmap.c	/^	E_BAD_ENV	= 2,	\/\/ Environment doesn't exist or otherwise$/;"	e	enum:__anon5	file:
+E_BAD_ENV	lib/printfmt.c	/^	E_BAD_ENV	= 2,	\/\/ Environment doesn't exist or otherwise$/;"	e	enum:__anon6	file:
+E_FAULT	kernel/memory/pmap.c	/^	E_FAULT		= 6,	\/\/ Memory fault$/;"	e	enum:__anon5	file:
+E_FAULT	lib/printfmt.c	/^	E_FAULT		= 6,	\/\/ Memory fault$/;"	e	enum:__anon6	file:
+E_INVAL	kernel/memory/pmap.c	/^	E_INVAL		= 3,	\/\/ Invalid parameter$/;"	e	enum:__anon5	file:
+E_INVAL	lib/printfmt.c	/^	E_INVAL		= 3,	\/\/ Invalid parameter$/;"	e	enum:__anon6	file:
+E_NO_FREE_ENV	kernel/memory/pmap.c	/^	E_NO_FREE_ENV	= 5,	\/\/ Attempt to create a new environment beyond$/;"	e	enum:__anon5	file:
+E_NO_FREE_ENV	lib/printfmt.c	/^	E_NO_FREE_ENV	= 5,	\/\/ Attempt to create a new environment beyond$/;"	e	enum:__anon6	file:
+E_NO_MEM	kernel/memory/pmap.c	/^	E_NO_MEM	= 4,	\/\/ Request failed due to memory shortage$/;"	e	enum:__anon5	file:
+E_NO_MEM	lib/printfmt.c	/^	E_NO_MEM	= 4,	\/\/ Request failed due to memory shortage$/;"	e	enum:__anon6	file:
+E_NO_SYS	kernel/memory/pmap.c	/^	E_NO_SYS	= 7,	\/\/ Unimplemented system call$/;"	e	enum:__anon5	file:
+E_NO_SYS	lib/printfmt.c	/^	E_NO_SYS	= 7,	\/\/ Unimplemented system call$/;"	e	enum:__anon6	file:
+E_UNSPECIFIED	kernel/memory/pmap.c	/^	E_UNSPECIFIED	= 1,	\/\/ Unspecified or unknown problem$/;"	e	enum:__anon5	file:
+E_UNSPECIFIED	lib/printfmt.c	/^	E_UNSPECIFIED	= 1,	\/\/ Unspecified or unknown problem$/;"	e	enum:__anon6	file:
 FEC_PR	include/mmu.h	123;"	d
 FEC_U	include/mmu.h	125;"	d
 FEC_WR	include/mmu.h	124;"	d
@@ -69,16 +79,28 @@ FL_VIF	include/mmu.h	118;"	d
 FL_VIP	include/mmu.h	119;"	d
 FL_VM	include/mmu.h	116;"	d
 FL_ZF	include/mmu.h	103;"	d
-FREQ_8253	kernel/device/timer.c	7;"	d	file:
+FREQ_8253	game/device/timer.c	7;"	d	file:
+GAME	Makefile	/^GAME := game.bin$/;"	m
+GAME_C	Makefile	/^GAME_C := $(shell find $(GAME_DIR) -name "*.c")$/;"	m
+GAME_DIR	Makefile	/^GAME_DIR     := game$/;"	m
+GAME_O	Makefile	/^GAME_O := $(GAME_C:%.c=$(OBJ_DIR)\/%.o)$/;"	m
+GAME_S	Makefile	/^GAME_S := $(shell find $(GAME_DIR) -name "*.S")$/;"	m
 GDB	Makefile	/^GDB     := gdb$/;"	m
 GDB_OPTIONS	Makefile	/^GDB_OPTIONS := -ex "target remote 127.0.0.1:1234"$/;"	m
 GDT_ENTRY	boot/asm.h	2;"	d
+GD_KD	include/memlayout.h	16;"	d
+GD_KT	include/memlayout.h	15;"	d
+GD_TSS0	include/memlayout.h	19;"	d
+GD_UD	include/memlayout.h	18;"	d
+GD_UT	include/memlayout.h	17;"	d
 GateDescriptor	include/mmu.h	/^struct GateDescriptor {$/;"	s
-HZ	kernel/device/timer.c	8;"	d	file:
+HZ	game/device/timer.c	8;"	d	file:
 IMAGE	Makefile	/^IMAGE  := disk.bin$/;"	m
 INTERRUPT_GATE_32	kernel/irq/idt.c	3;"	d	file:
+IOPHYSMEM	include/memlayout.h	92;"	d
 IRQ_SLAVE	kernel/irq/i8259.c	5;"	d	file:
 JOS_INC_ASSERT_H	include/assert.h	4;"	d
+JOS_INC_MEMLAYOUT_H	include/memlayout.h	2;"	d
 JOS_INC_MMU_H	include/mmu.h	2;"	d
 JOS_INC_STDARG_H	include/stdarg.h	3;"	d
 JOS_INC_STDIO_H	include/stdio.h	2;"	d
@@ -86,6 +108,8 @@ JOS_INC_STRING_H	include/string.h	2;"	d
 JOS_INC_TYPES_H	include/types.h	2;"	d
 JOS_INC_X86_H	include/x86.h	2;"	d
 JOS_KBDREG_H	include/kbdreg.h	2;"	d
+JOS_KERN_PMAP_H	include/pmap.h	4;"	d
+KADDR	include/pmap.h	35;"	d
 KBCMDP	include/kbdreg.h	29;"	d
 KBC_AUXDISABLE	include/kbdreg.h	32;"	d
 KBC_AUXECHO	include/kbdreg.h	36;"	d
@@ -138,6 +162,7 @@ KC8_KENABLE	include/kbdreg.h	59;"	d
 KC8_MDISABLE	include/kbdreg.h	54;"	d
 KC8_MENABLE	include/kbdreg.h	58;"	d
 KC8_TRANS	include/kbdreg.h	53;"	d
+KERNBASE	include/memlayout.h	87;"	d
 KERNEL	Makefile	/^KERNEL := kernel.bin$/;"	m
 KERNEL_C	Makefile	/^KERNEL_C := $(shell find $(KERNEL_DIR) -name "*.c")$/;"	m
 KERNEL_DIR	Makefile	/^KERNEL_DIR     := kernel$/;"	m
@@ -154,6 +179,9 @@ KEY_PGDN	include/kbdreg.h	12;"	d
 KEY_PGUP	include/kbdreg.h	11;"	d
 KEY_RT	include/kbdreg.h	10;"	d
 KEY_UP	include/kbdreg.h	7;"	d
+KSTACKTOP	include/memlayout.h	96;"	d
+KSTKGAP	include/memlayout.h	98;"	d
+KSTKSIZE	include/memlayout.h	97;"	d
 K_LDCMDBYTE	include/kbdreg.h	51;"	d
 K_RDCMDBYTE	include/kbdreg.h	50;"	d
 LD	Makefile	/^LD      := ld$/;"	m
@@ -162,8 +190,13 @@ LIB_C	Makefile	/^LIB_C := $(wildcard $(LIB_DIR)\/*.c)$/;"	m
 LIB_DIR	Makefile	/^LIB_DIR        := lib$/;"	m
 LIB_O	Makefile	/^LIB_O := $(LIB_C:%.c=$(OBJ_DIR)\/%.o)$/;"	m
 MAX	include/types.h	49;"	d
-MAXERROR	lib/printfmt.c	/^	MAXERROR$/;"	e	enum:__anon4	file:
+MAXERROR	kernel/memory/pmap.c	/^	MAXERROR$/;"	e	enum:__anon5	file:
+MAXERROR	lib/printfmt.c	/^	MAXERROR$/;"	e	enum:__anon6	file:
 MIN	include/types.h	43;"	d
+MMIOBASE	include/memlayout.h	102;"	d
+MMIOLIM	include/memlayout.h	101;"	d
+MULTIBOOT_HEADER_FLAGS	kernel/entry.S	/^#define MULTIBOOT_HEADER_FLAGS (0)$/;"	d
+MULTIBOOT_HEADER_MAGIC	kernel/entry.S	/^#define MULTIBOOT_HEADER_MAGIC (0x1BADB002)$/;"	d
 NPDENTRIES	include/mmu.h	45;"	d
 NPTENTRIES	include/mmu.h	46;"	d
 NR_IRQ	include/x86.h	7;"	d
@@ -173,11 +206,14 @@ NULL	include/types.h	5;"	d
 OBJCOPY	Makefile	/^OBJCOPY := objcopy$/;"	m
 OBJ_BOOT_DIR	Makefile	/^OBJ_BOOT_DIR   := $(OBJ_DIR)\/$(BOOT_DIR)$/;"	m
 OBJ_DIR	Makefile	/^OBJ_DIR        := obj$/;"	m
+OBJ_GAME_DIR	Makefile	/^OBJ_GAME_DIR := $(OBJ_DIR)\/$(GAME_DIR)$/;"	m
 OBJ_KERNEL_DIR	Makefile	/^OBJ_KERNEL_DIR := $(OBJ_DIR)\/$(KERNEL_DIR)$/;"	m
 OBJ_LIB_DIR	Makefile	/^OBJ_LIB_DIR    := $(OBJ_DIR)\/$(LIB_DIR)$/;"	m
-PARTIAL_UPDATE	kernel/device/video.c	13;"	d	file:
+PADDR	include/pmap.h	23;"	d
+PARTIAL_UPDATE	game/device/video.c	13;"	d	file:
 PDX	include/mmu.h	33;"	d
 PDXSHIFT	include/mmu.h	55;"	d
+PFTEMP	include/memlayout.h	137;"	d
 PGADDR	include/mmu.h	42;"	d
 PGNUM	include/mmu.h	30;"	d
 PGOFF	include/mmu.h	39;"	d
@@ -201,17 +237,20 @@ PTSHIFT	include/mmu.h	52;"	d
 PTSIZE	include/mmu.h	51;"	d
 PTX	include/mmu.h	36;"	d
 PTXSHIFT	include/mmu.h	54;"	d
-ProgramHeader	boot/boot.h	/^struct ProgramHeader {$/;"	s
+PageInfo	include/memlayout.h	/^struct PageInfo {$/;"	s
+ProgramHeader	include/boot.h	/^struct ProgramHeader {$/;"	s
 Pseudodesc	include/mmu.h	/^struct Pseudodesc {$/;"	s
 QEMU	Makefile	/^QEMU    := qemu-system-i386$/;"	m
 QEMU_DEBUG_OPTIONS	Makefile	/^QEMU_DEBUG_OPTIONS := -S #启动不执行$/;"	m
 QEMU_OPTIONS	Makefile	/^QEMU_OPTIONS := -serial stdio #以标准输入输为串口(COM1)$/;"	m
+RELOC	kernel/entry.S	/^#define	RELOC(x) ((x) - KERNBASE)$/;"	d
 ROUNDDOWN	include/types.h	58;"	d
 ROUNDUP	include/types.h	64;"	d
 SCR_HEIGHT	include/video.h	8;"	d
 SCR_SIZE	include/video.h	9;"	d
 SCR_WIDTH	include/video.h	7;"	d
 SECTSIZE	boot/main.c	11;"	d	file:
+SECTSIZE	kernel/elf/loader.c	3;"	d	file:
 SEG	include/mmu.h	150;"	d
 SEG	include/mmu.h	180;"	d
 SEG16	include/mmu.h	184;"	d
@@ -222,10 +261,12 @@ SEG_KERNEL_DATA	include/mmu.h	139;"	d
 SEG_NULL	include/mmu.h	147;"	d
 SEG_NULL	include/mmu.h	176;"	d
 SEG_NULLASM	boot/asm.h	5;"	d
-SERIAL_PORT	kernel/device/serial.c	3;"	d	file:
-SETCALLGATE	include/mmu.h	313;"	d
-SETGATE	include/mmu.h	299;"	d
-SLOW	kernel/device/video.c	10;"	d	file:
+SERIAL_PORT	game/device/serial.c	3;"	d	file:
+SERIAL_PORT	kernel/system/do_syscall.c	9;"	d	file:
+SETCALLGATE	include/mmu.h	314;"	d
+SETGATE	include/mmu.h	300;"	d
+SLOW	game/device/video.c	10;"	d	file:
+SRL	kernel/entry.S	/^#define SRL(val, shamt)		(((val) >> (shamt)) & ~(-1 << (32 - (shamt))))$/;"	d
 STA_A	include/mmu.h	197;"	d
 STA_C	include/mmu.h	194;"	d
 STA_E	include/mmu.h	193;"	d
@@ -245,35 +286,57 @@ STS_TG	include/mmu.h	204;"	d
 STS_TG16	include/mmu.h	206;"	d
 STS_TG32	include/mmu.h	211;"	d
 Segdesc	include/mmu.h	/^struct Segdesc {$/;"	s
-TIMER_PORT	kernel/device/timer.c	6;"	d	file:
+TIMER_PORT	game/device/timer.c	6;"	d	file:
 TRAP_GATE_32	kernel/irq/idt.c	4;"	d	file:
 Taskstate	include/mmu.h	/^struct Taskstate {$/;"	s
-TrapFrame	include/mmu.h	/^struct TrapFrame {$/;"	s
+TrapFrame	include/mmu.h	/^typedef struct TrapFrame {$/;"	s
+TrapFrame	include/mmu.h	/^}TrapFrame;$/;"	t	typeref:struct:TrapFrame
+UENVS	include/memlayout.h	116;"	d
+ULIM	include/memlayout.h	104;"	d
+UPAGES	include/memlayout.h	114;"	d
+USTABDATA	include/memlayout.h	139;"	d
+USTACKTOP	include/memlayout.h	128;"	d
+UTEMP	include/memlayout.h	134;"	d
+UTEXT	include/memlayout.h	131;"	d
+UTOP	include/memlayout.h	123;"	d
+UVPT	include/memlayout.h	112;"	d
+UXSTACKTOP	include/memlayout.h	125;"	d
 VMEM_ADDR	include/video.h	10;"	d
 __GAME_H__	include/game.h	2;"	d
-__KEYBOARD_H__	kernel/game/keyboard.c	2;"	d	file:
+__KEYBOARD_H__	game/keyboard.c	2;"	d	file:
 __TIMER_H__	include/timer.h	2;"	d
 __VIDEO_H__	include/video.h	2;"	d
+_kaddr	include/pmap.h	/^_kaddr(const char *file, int line, physaddr_t pa)$/;"	f
+_paddr	include/pmap.h	/^_paddr(const char *file, int line, void *kva)$/;"	f
 _panic	kernel/assert.c	/^_panic(const char *file, int line, const char *fmt,...)$/;"	f
+_start	kernel/entry.S	/^_start = RELOC(entry)$/;"	d
 _warn	kernel/assert.c	/^_warn(const char *file, int line, const char *fmt,...)$/;"	f
-align	boot/boot.h	/^	unsigned int align;$/;"	m	struct:ProgramHeader
+align	include/boot.h	/^	unsigned int align;$/;"	m	struct:ProgramHeader
 asm_do_irq	kernel/irq/do_irq.S	/^asm_do_irq:$/;"	l
 assert	include/assert.h	14;"	d
-block	kernel/game/effect.c	/^BLOCK block[3][3];$/;"	v
-blue_screen	kernel/device/video.c	/^blue_screen(){$/;"	f
+black_screen	game/device/video.c	/^black_screen(){$/;"	f
+block	game/effect.c	/^BLOCK block[3][3];$/;"	v
+blue_screen	game/device/video.c	/^blue_screen(){$/;"	f
 bool	include/types.h	/^typedef _Bool bool;$/;"	t
+boot_map_region	kernel/memory/pmap.c	/^boot_map_region(pde_t *pgdir, uintptr_t va, unsigned long size, physaddr_t pa, int perm)$/;"	f	file:
 bootmain	boot/main.c	/^bootmain(void) {$/;"	f
+bootstack	kernel/entry.S	/^bootstack:$/;"	l
+bootstacktop	kernel/entry.S	/^bootstacktop:$/;"	l
 breakpoint	include/x86.h	/^breakpoint(void)$/;"	f
 buf	lib/printfmt.c	/^	char *buf;$/;"	m	struct:sprintbuf	file:
+clearscreen	include/system.h	4;"	d
 cnt	lib/printfmt.c	/^	int cnt;$/;"	m	struct:sprintbuf	file:
 cpuid	include/x86.h	/^cpuid(uint32_t info, uint32_t *eaxp, uint32_t *ebxp, uint32_t *ecxp, uint32_t *edxp)$/;"	f
 disable_interrupt	include/x86.h	/^disable_interrupt(void){$/;"	f
-display_buffer	kernel/device/video.c	/^display_buffer(void) {$/;"	f
+display_buffer	game/device/video.c	/^display_buffer(void) {$/;"	f
 do_keyboard	kernel/irq/irq_handle.c	/^static void (*do_keyboard)(int);$/;"	v	file:
+do_syscall	kernel/system/do_syscall.c	/^void do_syscall(TrapFrame*tf){$/;"	f
 do_timer	kernel/irq/irq_handle.c	/^static void (*do_timer)(void);$/;"	v	file:
-draw_block	kernel/device/video.c	/^void draw_block(int index,uint8_t color){$/;"	f
-draw_border	kernel/device/video.c	/^void draw_border(void){$/;"	f
+draw_block	game/device/video.c	/^void draw_block(int index,uint8_t color){$/;"	f
+draw_border	game/device/video.c	/^void draw_border(void){$/;"	f
 draw_pixel	include/video.h	/^draw_pixel(int x, int y, int color) {$/;"	f
+drawpixel	include/system.h	2;"	d
+drawpixeloff	include/system.h	1;"	d
 eax	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
 ebp	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
 ebuf	lib/printfmt.c	/^	char *ebuf;$/;"	m	struct:sprintbuf	file:
@@ -281,33 +344,40 @@ ebx	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	stru
 ecx	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
 edi	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
 edx	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
-ehsize	boot/boot.h	/^	unsigned short ehsize;$/;"	m	struct:ELFHeader
-elf	boot/boot.h	/^	unsigned char  elf[12];$/;"	m	struct:ELFHeader
+ehsize	include/boot.h	/^	unsigned short ehsize;$/;"	m	struct:ELFHeader
+elf	include/boot.h	/^	unsigned char  elf[12];$/;"	m	struct:ELFHeader
+empty_list	kernel/memory/pmap.c	/^bool empty_list(struct PageInfo*pt){$/;"	f
 enable_interrupt	include/x86.h	/^enable_interrupt(void){$/;"	f
-entry	boot/boot.h	/^	unsigned int   entry;$/;"	m	struct:ELFHeader
+entry	include/boot.h	/^	unsigned int   entry;$/;"	m	struct:ELFHeader
+entry	kernel/entry.S	/^entry:$/;"	l
+entry_pgdir	kernel/memory/entrypgdir.c	/^pde_t entry_pgdir[NPDENTRIES] = {$/;"	v
+entry_pgtable	kernel/memory/entrypgdir.c	/^pte_t entry_pgtable[NPTENTRIES] = {$/;"	v
+entry_pgtable	kernel/memory/entrypgdir.c	/^pte_t entry_pgtable[NPTENTRIES];$/;"	v
+error_code	include/mmu.h	/^	uint32_t error_code;$/;"	m	struct:TrapFrame
 error_string	lib/printfmt.c	/^static const char * const error_string[MAXERROR] =$/;"	v	file:
 esi	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
-false	include/types.h	/^enum { false, true };$/;"	e	enum:__anon1
-filesz	boot/boot.h	/^	unsigned int filesz;$/;"	m	struct:ProgramHeader
-flags	boot/boot.h	/^	unsigned int   flags;$/;"	m	struct:ELFHeader
-flags	boot/boot.h	/^	unsigned int flags;$/;"	m	struct:ProgramHeader
-game_loop	kernel/game/effect.c	/^void game_loop(){$/;"	f
+false	include/types.h	/^enum { false, true };$/;"	e	enum:__anon3
+filesz	include/boot.h	/^	unsigned int filesz;$/;"	m	struct:ProgramHeader
+flags	include/boot.h	/^	unsigned int   flags;$/;"	m	struct:ELFHeader
+flags	include/boot.h	/^	unsigned int flags;$/;"	m	struct:ProgramHeader
+game_loop	game/effect.c	/^void game_loop(){$/;"	f
 gdt	boot/start.S	/^gdt:$/;"	l
 gdtdesc	boot/start.S	/^gdtdesc:                           # GDT描述符$/;"	l
 getint	lib/printfmt.c	/^getint(va_list *ap, int lflag)$/;"	f	file:
 getuint	lib/printfmt.c	/^getuint(va_list *ap, int lflag)$/;"	f	file:
 hlt	include/x86.h	/^hlt(void)$/;"	f
 idt	kernel/irq/idt.c	/^struct GateDescriptor idt[NR_IRQ];$/;"	v	typeref:struct:GateDescriptor
-ifend	kernel/game/effect.c	/^	bool ifend;$/;"	m	struct:__anon3	file:
-in_byte	boot/boot.h	/^in_byte(short port) {$/;"	f
-in_long	boot/boot.h	/^in_long(short port) {$/;"	f
+ifend	game/effect.c	/^	bool ifend;$/;"	m	struct:__anon2	file:
+in_byte	include/boot.h	/^in_byte(short port) {$/;"	f
+in_long	include/boot.h	/^in_long(short port) {$/;"	f
 inb	include/x86.h	/^inb(int port)$/;"	f
-init_block	kernel/game/effect.c	/^void init_block(){$/;"	f
-init_game	kernel/game/game.c	/^void init_game(){$/;"	f
+init_block	game/effect.c	/^void init_block(){$/;"	f
+init_cond	kernel/main.c	/^void init_cond(){$/;"	f
+init_game	game/game.c	/^void init_game(){$/;"	f
 init_idt	kernel/irq/idt.c	/^void init_idt() {$/;"	f
 init_intr	kernel/irq/i8259.c	/^init_intr(void) {$/;"	f
-init_serial	kernel/device/serial.c	/^init_serial(void) {$/;"	f
-init_timer	kernel/device/timer.c	/^void init_timer(void) {$/;"	f
+init_serial	game/device/serial.c	/^init_serial(void) {$/;"	f
+init_timer	game/device/timer.c	/^void init_timer(void) {$/;"	f
 inl	include/x86.h	/^inl(int port)$/;"	f
 insb	include/x86.h	/^insb(int port, void *addr, int cnt)$/;"	f
 insl	include/x86.h	/^insl(int port, void *addr, int cnt)$/;"	f
@@ -321,71 +391,93 @@ invlpg	include/x86.h	/^invlpg(void *addr)$/;"	f
 inw	include/x86.h	/^inw(int port)$/;"	f
 irq	include/mmu.h	/^	int32_t irq;$/;"	m	struct:TrapFrame
 irq_handle	kernel/irq/irq_handle.c	/^irq_handle(struct TrapFrame *tf) {$/;"	f
-isempty	kernel/game/effect.c	/^	int isempty;$/;"	m	struct:__anon3	file:
-isempty	kernel/game/effect.c	/^	int isempty;\/\/0,1,2$/;"	m	struct:__anon2	file:
-judge_end	kernel/game/effect.c	/^END judge_end(){$/;"	f
-key_code	kernel/game/keyboard.c	/^static volatile int key_code = 0;$/;"	v	file:
-keyboard_event	kernel/game/keyboard.c	/^keyboard_event(int code) {$/;"	f
-last_key_code	kernel/game/keyboard.c	/^int last_key_code(void) {$/;"	f
-last_line	kernel/device/video.c	/^int last_line=SCR_HEIGHT*4\/5;$/;"	v
-last_row	kernel/device/video.c	/^int last_row=SCR_HEIGHT*4\/5;$/;"	v
+isempty	game/effect.c	/^	int isempty;$/;"	m	struct:__anon2	file:
+isempty	game/effect.c	/^	int isempty;\/\/0,1,2$/;"	m	struct:__anon1	file:
+judge_end	game/effect.c	/^END judge_end(){$/;"	f
+key_code	game/keyboard.c	/^static volatile int key_code = 0;$/;"	v	file:
+keyboard_event	game/keyboard.c	/^keyboard_event(int code) {$/;"	f
+last_key_code	game/keyboard.c	/^int last_key_code(void) {$/;"	f
+last_line	game/device/video.c	/^int last_line=SCR_HEIGHT*4\/5;$/;"	v
+last_row	game/device/video.c	/^int last_row=SCR_HEIGHT*4\/5;$/;"	v
 lcr0	include/x86.h	/^lcr0(uint32_t val)$/;"	f
 lcr3	include/x86.h	/^lcr3(uint32_t val)$/;"	f
 lcr4	include/x86.h	/^lcr4(uint32_t val)$/;"	f
-letter_code	kernel/game/keyboard.c	/^static int letter_code[] = {$/;"	v	file:
-letter_pressed	kernel/game/keyboard.c	/^static bool letter_pressed[26];$/;"	v	file:
+letter_code	game/keyboard.c	/^static int letter_code[] = {$/;"	v	file:
+letter_pressed	game/keyboard.c	/^static bool letter_pressed[26];$/;"	v	file:
 lgdt	include/x86.h	/^lgdt(void *p)$/;"	f
 lidt	include/x86.h	/^lidt(void *p)$/;"	f
-line_num	kernel/device/video.c	/^int line_num=4;$/;"	v
-line_width	kernel/device/video.c	/^int line_width=4;$/;"	v
+line_num	game/device/video.c	/^int line_num=4;$/;"	v
+line_width	game/device/video.c	/^int line_width=4;$/;"	v
 lldt	include/x86.h	/^lldt(uint16_t sel)$/;"	f
+loader	kernel/elf/loader.c	/^loader(void) {$/;"	f
 log2	include/stdio.h	24;"	d
 ltr	include/x86.h	/^ltr(uint16_t sel)$/;"	f
-machine	boot/boot.h	/^	unsigned short machine;$/;"	m	struct:ELFHeader
-magic	boot/boot.h	/^	unsigned int   magic;$/;"	m	struct:ELFHeader
-main	kernel/game/game.c	/^int main(){$/;"	f
+machine	include/boot.h	/^	unsigned short machine;$/;"	m	struct:ELFHeader
+magic	include/boot.h	/^	unsigned int   magic;$/;"	m	struct:ELFHeader
+main	game/game.c	/^int main(){$/;"	f
+main	kernel/main.c	/^int main(){$/;"	f
 memcmp	lib/string.c	/^memcmp(const void *v1, const void *v2, size_t n)$/;"	f
 memcpy	lib/string.c	/^memcpy(void *dst, const void *src, size_t n)$/;"	f
 memfind	lib/string.c	/^memfind(const void *s, int c, size_t n)$/;"	f
 memmove	lib/string.c	/^memmove(void *dst, const void *src, size_t n)$/;"	f
 memset	lib/string.c	/^memset(void *v, int c, size_t n)$/;"	f
-memsz	boot/boot.h	/^	unsigned int memsz;$/;"	m	struct:ProgramHeader
-num	kernel/game/effect.c	/^	int num;$/;"	m	struct:__anon2	file:
-num_aph	kernel/game/effect.c	/^	int num_aph;$/;"	m	struct:__anon2	file:
-off	boot/boot.h	/^	unsigned int off;$/;"	m	struct:ProgramHeader
+memsz	include/boot.h	/^	unsigned int memsz;$/;"	m	struct:ProgramHeader
+npages	include/pmap.h	9;"	d
+num	game/effect.c	/^	int num;$/;"	m	struct:__anon1	file:
+num_aph	game/effect.c	/^	int num_aph;$/;"	m	struct:__anon1	file:
+off	include/boot.h	/^	unsigned int off;$/;"	m	struct:ProgramHeader
 off_t	include/types.h	/^typedef int32_t off_t;$/;"	t
 offset_15_0	include/mmu.h	/^	uint32_t offset_15_0      : 16;\/\/low 16bit of offset in segment$/;"	m	struct:GateDescriptor
 offset_31_16	include/mmu.h	/^	uint32_t offset_31_16     : 16;\/\/high bits of offset in segment$/;"	m	struct:GateDescriptor
 offsetof	include/types.h	75;"	d
-out_byte	boot/boot.h	/^out_byte(short port, char data) {$/;"	f
+out_byte	include/boot.h	/^out_byte(short port, char data) {$/;"	f
 outb	include/x86.h	/^outb(int port, uint8_t data)$/;"	f
 outl	include/x86.h	/^outl(int port, uint32_t data)$/;"	f
 outsb	include/x86.h	/^outsb(int port, const void *addr, int cnt)$/;"	f
 outsl	include/x86.h	/^outsl(int port, const void *addr, int cnt)$/;"	f
 outsw	include/x86.h	/^outsw(int port, const void *addr, int cnt)$/;"	f
 outw	include/x86.h	/^outw(int port, uint16_t data)$/;"	f
+pa2page	include/pmap.h	/^pa2page(physaddr_t pa)$/;"	f
 pad0	include/mmu.h	/^	uint32_t pad0             : 8;\/\/low 5#args, 0 for interrupt\/trap gates high 3bit:reserved(should be 0 I guess)$/;"	m	struct:GateDescriptor
-paddr	boot/boot.h	/^	unsigned int paddr;$/;"	m	struct:ProgramHeader
+paddr	include/boot.h	/^	unsigned int paddr;$/;"	m	struct:ProgramHeader
+page2kva	include/pmap.h	/^page2kva(struct PageInfo *pp)$/;"	f
+page2pa	include/pmap.h	/^page2pa(struct PageInfo *pp)$/;"	f
+page_alloc	kernel/memory/pmap.c	/^page_alloc(int alloc_flags)$/;"	f
+page_decref	kernel/memory/pmap.c	/^page_decref(struct PageInfo* pp)$/;"	f
+page_free	kernel/memory/pmap.c	/^page_free(struct PageInfo *pp)$/;"	f
+page_free_list	kernel/memory/pmap.c	/^static struct PageInfo *page_free_list;	\/\/ Free list of physical pages$/;"	v	typeref:struct:PageInfo	file:
+page_init	kernel/memory/pmap.c	/^page_init(void)$/;"	f
+page_insert	kernel/memory/pmap.c	/^page_insert(pde_t *pgdir, struct PageInfo *pp, void *va, int perm)$/;"	f
+page_lookup	kernel/memory/pmap.c	/^page_lookup(pde_t *pgdir, void *va, pte_t **pte_store)$/;"	f
+page_remove	kernel/memory/pmap.c	/^page_remove(pde_t *pgdir, void *va)$/;"	f
+pages	kernel/memory/pmap.c	/^struct PageInfo pages[npages];		\/\/ Physical page state array$/;"	v	typeref:struct:PageInfo
 panic	include/assert.h	12;"	d
 panicstr	kernel/assert.c	/^const char *panicstr;$/;"	v
 pd_base	include/mmu.h	/^	uint32_t pd_base;		\/\/ Base address$/;"	m	struct:Pseudodesc
 pd_lim	include/mmu.h	/^	uint16_t pd_lim;		\/\/ Limit$/;"	m	struct:Pseudodesc
-phentsize	boot/boot.h	/^	unsigned short phentsize;$/;"	m	struct:ELFHeader
-phnum	boot/boot.h	/^	unsigned short phnum;$/;"	m	struct:ELFHeader
-phoff	boot/boot.h	/^	unsigned int   phoff;$/;"	m	struct:ELFHeader
+pde_t	include/memlayout.h	/^typedef uint32_t pde_t;$/;"	t
+pgdir_walk	kernel/memory/pmap.c	/^pgdir_walk(pde_t *pgdir, const void *va, int create)$/;"	f
+phentsize	include/boot.h	/^	unsigned short phentsize;$/;"	m	struct:ELFHeader
+phnum	include/boot.h	/^	unsigned short phnum;$/;"	m	struct:ELFHeader
+phoff	include/boot.h	/^	unsigned int   phoff;$/;"	m	struct:ELFHeader
 physaddr_t	include/types.h	/^typedef uint32_t physaddr_t;$/;"	t
+pp_link	include/memlayout.h	/^	struct PageInfo *pp_link;$/;"	m	struct:PageInfo	typeref:struct:PageInfo::PageInfo
+pp_ref	include/memlayout.h	/^	uint16_t pp_ref;$/;"	m	struct:PageInfo
 ppn_t	include/types.h	/^typedef uint32_t ppn_t;$/;"	t
-prepare_buffer	kernel/device/video.c	/^prepare_buffer(void) {$/;"	f
+prepare_buffer	game/device/video.c	/^prepare_buffer(void) {$/;"	f
 present	include/mmu.h	/^	uint32_t present          : 1;\/\/Present$/;"	m	struct:GateDescriptor
-press_key	kernel/game/keyboard.c	/^press_key(int scan_code) {$/;"	f
+press_key	game/keyboard.c	/^press_key(int scan_code) {$/;"	f
 printfmt	lib/printfmt.c	/^printfmt(void (*putch)(int, void*), void *putdat, const char *fmt, ...)$/;"	f
+printg	game/device/printg.c	/^int printg(const char *fmt,...){$/;"	f
 printk	kernel/printk.c	/^int	printk(const char *fmt, ...){$/;"	f
 printnum	lib/printfmt.c	/^printnum(void (*putch)(int, void*), void *putdat,$/;"	f	file:
 privilege_level	include/mmu.h	/^	uint32_t privilege_level  : 2;\/\/descriptor(meaning new)privilege$/;"	m	struct:GateDescriptor
+pte_t	include/memlayout.h	/^typedef uint32_t pte_t;$/;"	t
 putch	kernel/printk.c	/^putch(int ch, int *cnt){$/;"	f	file:
-quater_height	kernel/device/video.c	/^int quater_height=SCR_HEIGHT\/4;$/;"	v
-quater_width	kernel/device/video.c	/^int quater_width=SCR_HEIGHT\/4;$/;"	v
-query_key	kernel/game/keyboard.c	/^query_key(int index) {$/;"	f
+putch_g	game/device/printg.c	/^putch_g(int ch,int *cnt){$/;"	f	file:
+quater_height	game/device/video.c	/^int quater_height=SCR_HEIGHT\/4;$/;"	v
+quater_width	game/device/video.c	/^int quater_width=SCR_HEIGHT\/4;$/;"	v
+query_key	game/keyboard.c	/^query_key(int index) {$/;"	f
 rcr0	include/x86.h	/^rcr0(void)$/;"	f
 rcr2	include/x86.h	/^rcr2(void)$/;"	f
 rcr3	include/x86.h	/^rcr3(void)$/;"	f
@@ -395,10 +487,14 @@ read_eflags	include/x86.h	/^read_eflags(void)$/;"	f
 read_esp	include/x86.h	/^read_esp(void)$/;"	f
 read_tsc	include/x86.h	/^read_tsc(void)$/;"	f
 readsect	boot/main.c	/^readsect(void *dst, int offset) {$/;"	f
+readsect	kernel/elf/loader.c	/^readsect(void *dst, int offset) {$/;"	f
 readseg	boot/main.c	/^readseg(unsigned char *pa, int count, int offset) {$/;"	f
-release_key	kernel/game/keyboard.c	/^release_key(int index) {$/;"	f
-row_num	kernel/device/video.c	/^int row_num=4;$/;"	v
-row_width	kernel/device/video.c	/^int row_width=4;$/;"	v
+readseg	kernel/elf/loader.c	/^readseg(unsigned char *pa, int count, int offset) {$/;"	f
+readseg_va	kernel/elf/loader.c	/^void readseg_va(uint32_t *va,int count,int offset){$/;"	f
+release_key	game/keyboard.c	/^release_key(int index) {$/;"	f
+relocated	kernel/entry.S	/^relocated:$/;"	l
+row_num	game/device/video.c	/^int row_num=4;$/;"	v
+row_width	game/device/video.c	/^int row_width=4;$/;"	v
 save_idt	kernel/irq/idt.c	/^static inline void save_idt(void *addr, uint32_t size){$/;"	f	file:
 sd_avl	include/mmu.h	/^	unsigned sd_avl : 1;        \/\/ Unused (available for software use)$/;"	m	struct:Segdesc
 sd_base_15_0	include/mmu.h	/^	unsigned sd_base_15_0 : 16; \/\/ Low bits of segment base address$/;"	m	struct:Segdesc
@@ -414,18 +510,21 @@ sd_rsv1	include/mmu.h	/^	unsigned sd_rsv1 : 1;       \/\/ Reserved$/;"	m	struct:
 sd_s	include/mmu.h	/^	unsigned sd_s : 1;          \/\/ 0 = system, 1 = application$/;"	m	struct:Segdesc
 sd_type	include/mmu.h	/^	unsigned sd_type : 4;       \/\/ Segment type (see STS_ constants)$/;"	m	struct:Segdesc
 segment	include/mmu.h	/^	uint32_t segment          : 16;\/\/segment selector$/;"	m	struct:GateDescriptor
-serial_idle	kernel/device/serial.c	/^serial_idle(void) {$/;"	f	file:
-serial_printc	kernel/device/serial.c	/^serial_printc(char ch) {$/;"	f
+serial_idle	game/device/serial.c	/^serial_idle(void) {$/;"	f	file:
+serial_printc	game/device/serial.c	/^serial_printc(char ch) {$/;"	f
+serialprint	include/system.h	3;"	d
 set_intr	kernel/irq/idt.c	/^set_intr(struct GateDescriptor *ptr, uint32_t selector, uint32_t offset, uint32_t dpl) {$/;"	f	file:
 set_keyboard_intr_handler	kernel/irq/irq_handle.c	/^set_keyboard_intr_handler( void (*ptr)(int) ) {$/;"	f
 set_timer_intr_handler	kernel/irq/irq_handle.c	/^set_timer_intr_handler( void (*ptr)(void) ) {$/;"	f
 set_trap	kernel/irq/idt.c	/^set_trap(struct GateDescriptor *ptr, uint32_t selector, uint32_t offset, uint32_t dpl) {$/;"	f	file:
-shentsize	boot/boot.h	/^	unsigned short shentsize;$/;"	m	struct:ELFHeader
-shnum	boot/boot.h	/^	unsigned short shnum;$/;"	m	struct:ELFHeader
-shoff	boot/boot.h	/^	unsigned int   shoff;$/;"	m	struct:ELFHeader
-shstrndx	boot/boot.h	/^	unsigned short shstrndx;$/;"	m	struct:ELFHeader
+shentsize	include/boot.h	/^	unsigned short shentsize;$/;"	m	struct:ELFHeader
+shnum	include/boot.h	/^	unsigned short shnum;$/;"	m	struct:ELFHeader
+shoff	include/boot.h	/^	unsigned int   shoff;$/;"	m	struct:ELFHeader
+shstrndx	include/boot.h	/^	unsigned short shstrndx;$/;"	m	struct:ELFHeader
 size_t	include/types.h	/^typedef uint32_t size_t;$/;"	t
+sleep	game/game.c	/^void sleep(int time){$/;"	f
 snprintf	lib/printfmt.c	/^snprintf(char *buf, int n, const char *fmt, ...)$/;"	f
+spin	kernel/entry.S	/^spin:	jmp	spin$/;"	l
 sprintbuf	lib/printfmt.c	/^struct sprintbuf {$/;"	s	file:
 sprintputch	lib/printfmt.c	/^sprintputch(int ch, struct sprintbuf *b)$/;"	f	file:
 ssize_t	include/types.h	/^typedef int32_t ssize_t;$/;"	t
@@ -443,11 +542,17 @@ strncmp	lib/string.c	/^strncmp(const char *p, const char *q, size_t n)$/;"	f
 strncpy	lib/string.c	/^strncpy(char *dst, const char *src, size_t size) {$/;"	f
 strnlen	lib/string.c	/^strnlen(const char *s, size_t size)$/;"	f
 strtol	lib/string.c	/^strtol(const char *s, char **endptr, int base)$/;"	f
+syscall	game/lib/syscall.c	/^syscall(int id,...){$/;"	f
 system	include/mmu.h	/^	uint32_t system           : 1;\/\/must be 0(system)$/;"	m	struct:GateDescriptor
-tick	kernel/game/game.c	/^volatile int tick=0;$/;"	v
-timer_event	kernel/game/game.c	/^void timer_event(void){$/;"	f
+system_clear_screen	game/lib/syscall.c	/^void system_clear_screen(int eax,int color){$/;"	f
+system_draw_pixel	game/lib/syscall.c	/^void system_draw_pixel(int eax,int x,int y,int color){$/;"	f
+system_draw_pixel_off	game/lib/syscall.c	/^void system_draw_pixel_off(int eax,int off,int color){$/;"	f
+system_serial_print	game/lib/syscall.c	/^void system_serial_print(int eax,char ch){$/;"	f
+tick	game/game.c	/^volatile int tick=0;$/;"	v
+timer_event	game/game.c	/^void timer_event(void){$/;"	f
+tlb_invalidate	kernel/memory/pmap.c	/^tlb_invalidate(pde_t *pgdir, void *va)$/;"	f
 tlbflush	include/x86.h	/^tlbflush(void)$/;"	f
-true	include/types.h	/^enum { false, true };$/;"	e	enum:__anon1
+true	include/types.h	/^enum { false, true };$/;"	e	enum:__anon3
 ts_cr3	include/mmu.h	/^	physaddr_t ts_cr3;	\/\/ Page directory base$/;"	m	struct:Taskstate
 ts_cs	include/mmu.h	/^	uint16_t ts_cs;$/;"	m	struct:Taskstate
 ts_ds	include/mmu.h	/^	uint16_t ts_ds;$/;"	m	struct:Taskstate
@@ -485,8 +590,8 @@ ts_ss0	include/mmu.h	/^	uint16_t ts_ss0;	\/\/   after an increase in privilege l
 ts_ss1	include/mmu.h	/^	uint16_t ts_ss1;$/;"	m	struct:Taskstate
 ts_ss2	include/mmu.h	/^	uint16_t ts_ss2;$/;"	m	struct:Taskstate
 ts_t	include/mmu.h	/^	uint16_t ts_t;		\/\/ Trap on task switch$/;"	m	struct:Taskstate
-type	boot/boot.h	/^	unsigned int type;$/;"	m	struct:ProgramHeader
-type	boot/boot.h	/^	unsigned short type;$/;"	m	struct:ELFHeader
+type	include/boot.h	/^	unsigned int type;$/;"	m	struct:ProgramHeader
+type	include/boot.h	/^	unsigned short type;$/;"	m	struct:ELFHeader
 type	include/mmu.h	/^	uint32_t type             : 4;\/\/type(STS_{TG,IG32,TG32})$/;"	m	struct:GateDescriptor
 uint16_t	include/types.h	/^typedef unsigned short uint16_t;$/;"	t
 uint32_t	include/types.h	/^typedef unsigned int uint32_t;$/;"	t
@@ -497,17 +602,21 @@ va_arg	include/stdarg.h	9;"	d
 va_end	include/stdarg.h	11;"	d
 va_list	include/stdarg.h	/^typedef __builtin_va_list va_list;$/;"	t
 va_start	include/stdarg.h	7;"	d
-vaddr	boot/boot.h	/^	unsigned int vaddr;$/;"	m	struct:ProgramHeader
-vbuf	kernel/device/video.c	/^static uint8_t vbuf[SCR_SIZE];$/;"	v	file:
-version	boot/boot.h	/^	unsigned int   version;$/;"	m	struct:ELFHeader
-vmem	kernel/device/video.c	/^uint8_t *vmem = VMEM_ADDR;$/;"	v
+vaddr	include/boot.h	/^	unsigned int vaddr;$/;"	m	struct:ProgramHeader
+vbuf	game/device/video.c	/^static uint8_t vbuf[SCR_SIZE];$/;"	v	file:
+version	include/boot.h	/^	unsigned int   version;$/;"	m	struct:ELFHeader
+vmem	game/device/video.c	/^uint8_t *vmem = VMEM_ADDR;$/;"	v
+vmembase	kernel/system/do_syscall.c	/^static uint8_t *vmembase=VMEM_ADDR;$/;"	v	file:
 vprintfmt	lib/printfmt.c	/^vprintfmt(void (*putch)(int, void*), void *putdat, const char *fmt, va_list ap)$/;"	f
+vprintg	game/device/printg.c	/^int vprintg(const char *fmt,va_list ap){$/;"	f
 vprintk	kernel/printk.c	/^int vprintk(const char *fmt,va_list ap){ $/;"	f
-vref	kernel/device/video.c	/^static uint8_t vref[SCR_SIZE];$/;"	v	file:
+vref	game/device/video.c	/^static uint8_t vref[SCR_SIZE];$/;"	v	file:
 vsnprintf	lib/printfmt.c	/^vsnprintf(char *buf, int n, const char *fmt, va_list ap)$/;"	f
 waitdisk	boot/main.c	/^waitdisk(void) {$/;"	f
+waitdisk	kernel/elf/loader.c	/^waitdisk(void) {$/;"	f
 warn	include/assert.h	11;"	d
-white_screen	kernel/device/video.c	/^white_screen(){$/;"	f
+white_screen	game/device/video.c	/^white_screen(){$/;"	f
 write_eflags	include/x86.h	/^write_eflags(uint32_t eflags)$/;"	f
 xchg	include/x86.h	/^xchg(volatile uint32_t *addr, uint32_t newval)$/;"	f
 xxx	include/mmu.h	/^	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;$/;"	m	struct:TrapFrame
+yellow_screen	game/device/video.c	/^yellow_screen(){$/;"	f
