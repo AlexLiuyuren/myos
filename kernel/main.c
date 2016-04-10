@@ -1,30 +1,39 @@
 #include"include/pmap.h"
-void init_serial();
-void init_idt();
-void init_intr();
-void init_timer();
+#include"include/game.h"
+#include"include/string.h"
+#include"include/x86.h"
+extern pde_t entry_pgdir[];
 void init_cond();
 void init_mem();
-void loader();
+void* loader();
 int kernel_main(){
+	printk("before page init\n");
 	page_init();
+	printk("after page init\n");
 	init_cond();
+	printk("after condition init\n");
 	return 0;
 }
 
 void init_cond(){
-	printk("init");
 	init_idt();
 	init_intr();
 	init_serial();
 	init_timer();
 	init_mem();
-	printk("fuck");
-	asm volatile("sti");
-	//init_mm();
-	while(1);
-	//uint32_t eip=loader();
-	//((void(*)(void))eip)();
+	//asm volatile("sti");
+	//to store kernel pgd
+	struct PageInfo *page=page_alloc(1);
+	uint32_t cr3_game=page2pa(page);
+	pde_t *pgdir_game=page2kva(page);
+	memcpy(pgdir_game,entry_pgdir,4096);
+	//int *p = (int *)0xa0000;
+	//*p = 0;
+	//while(1);
+	void* eip=loader(pgdir_game);
+	lcr3(cr3_game);
+	printk("eip=%x\n",eip);
+	((void(*)(void))eip)();
 	printk("shouldn't reach here");
 
 }

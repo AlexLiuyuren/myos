@@ -15,6 +15,7 @@ void init_idt();
 void init_intr();
 /* 按键相关 */
 void set_keyboard_intr_handler(void(*ptr)(int));
+void keyboard_event();
 void press_key(int scan_code);
 void release_key(int ch);
 bool query_key(int ch);

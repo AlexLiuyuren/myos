@@ -31,13 +31,13 @@ press_key(int scan_code) {
 
 void
 release_key(int index) {
-	assert(0 <= index && index < 26);
+	//assert(0 <= index && index < 26);
 	letter_pressed[index] = false;
 }
 
 bool
 query_key(int index) {
-	assert(0 <= index && index < 26);
+	//assert(0 <= index && index < 26);
 	return letter_pressed[index];
 }
 
@@ -52,5 +52,12 @@ void
 keyboard_event(int code) {
 	key_code = code;
 	press_key(code);
+}
+
+void clear_letter_pressed(){
+	int i;
+	for(i=0;i<26;i++){
+		letter_pressed[i]=false;	
+	}
 }
 #endif

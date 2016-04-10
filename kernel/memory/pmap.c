@@ -2,6 +2,7 @@
 #include"include/x86.h"
 #include"include/pmap.h"
 #include"include/string.h"
+#include"include/stdio.h"
 
 enum {
 	// Kernel error codes -- keep in sync with list in lib/printfmt.c.
@@ -46,12 +47,16 @@ page_init(void)
 	// 
 	// NB: DO NOT actually touch the physical memory corresponding to
 	// free pages!
+	//printk("fuck");
+//	while(1);
 	unsigned long i;
-	for (i = 0; i < npages; i++) {
+	for (i = npages-1; i > 0x1c9; i--) {
 		pages[i].pp_ref = 0;
 		pages[i].pp_link = page_free_list;
 		page_free_list = &pages[i];
 	}
+	return ;
+
 }
 
 //
@@ -149,13 +154,15 @@ pgdir_walk(pde_t *pgdir, const void *va, int create)
 		if(create==false){
 			return NULL;
 		}
-		else if(!(newpage=page_alloc(1))){
+		else if(!(newpage=page_alloc(ALLOC_ZERO))){
 			return NULL;
 		}
 		else{
 			newpage->pp_ref++;
 			pa=page2pa(newpage);
-			memset((void*)pa,0,PGSIZE);
+			//while(1);
+			//printk("%x\n",pa);
+			//memset((void*)pa,0,PGSIZE);
 			//alloc a page to store a page table
 			pgdir[PDX(va)]=pa|PTE_P|PTE_W|PTE_U;
 			result=page2kva(newpage);
@@ -165,6 +172,7 @@ pgdir_walk(pde_t *pgdir, const void *va, int create)
 		//kva result is the addr of page table
 		result=page2kva(pa2page(pgdir[PDX(va)]));
 	}
+	//printk("%x %x\n",va,&result[PTX(va)]);
 	return &result[PTX(va)];
 }
 
@@ -189,6 +197,7 @@ boot_map_region(pde_t *pgdir, uintptr_t va, unsigned long size, physaddr_t pa, i
 		p=pgdir_walk(pgdir,(void*)va,1);
 		*p=(pa+PGSIZE*i)|perm|PTE_P;
 	}
+	//printk("what the fuck");
 }
 
 //
@@ -257,15 +266,15 @@ page_lookup(pde_t *pgdir, void *va, pte_t **pte_store)
 	// Fill this function in
 	struct PageInfo *result;
 	pte_t *pte=pgdir_walk(pgdir,va,0);
-	if(!pte_store){
+	if(!pte)
+		return NULL;
+	if(pte_store){
 		*pte_store=pte;
 	}
 	if(!(*pte)){
 		return NULL;
 	}
-	else{
-		result=pa2page(*pte);
-	}
+	result=pa2page(*pte);
 	return result;
 }
 
@@ -312,5 +321,6 @@ tlb_invalidate(pde_t *pgdir, void *va)
 void init_mem(){
 	//tm create a mappting
 	boot_map_region(entry_pgdir,KERNBASE,npages*PGSIZE,0,PTE_W);
+	boot_map_region(entry_pgdir,0xa0000,320*200,0xa0000,PTE_W|PTE_U);
 	return ;
 }

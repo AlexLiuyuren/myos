@@ -94,8 +94,8 @@ void game_loop(){
 						if((block[j][k].num_aph==i)&&(block[j][k].isempty==0)){
 							if (count%2==0)
 							{
-								printk("i=%d,j=%d.k=%d\n",i,j,k);
-								printk("num=%d",block[j][k].num);
+								//printk("i=%d,j=%d.k=%d\n",i,j,k);
+								//printk("num=%d",block[j][k].num);
 								draw_block(block[j][k].num,15);block[j][k].isempty=1;display_buffer();}
 							else
 							{draw_block(block[j][k].num,1);block[j][k].isempty=2;display_buffer();}

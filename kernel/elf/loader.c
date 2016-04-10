@@ -1,34 +1,50 @@
 #include "include/boot.h"
+#include "include/string.h"
+#include "include/pmap.h"
+#include "include/mmu.h"
 #include "include/memlayout.h"
+
 #define SECTSIZE 512
 
 void readseg(unsigned char *, int, int);
-extern pte_t entry_pgdir[NPDENTRIES];
 extern struct PageInfo* page_free_list; 
-void
-loader(void) {
+unsigned char buffer[4096];
+void*
+loader(pde_t *entry_pgdir) {
 	struct ELFHeader *elf;
 	struct ProgramHeader *ph, *eph;
-	unsigned char* pa, *i;
+	unsigned char pagebuffer[4096];
 
-	/* 因为引导扇区只有512字节，我们设置了堆栈从0x8000向下生长。
-	 * 我们需要一块连续的空间来容纳ELF文件头，因此选定了0x8000。 */
-	elf = (struct ELFHeader*)0xC0400000;
+	elf = (struct ELFHeader*)buffer;
 	/* 读入ELF文件头 */
-	//pte_t *pte=pgdir_walk(entry_pgdir,elf,1);
-	//page_insert(entry_pgdir,page_free_list,(void *)elf,PTE_W|PTE_U|PTE_P);
 	readseg((unsigned char*)elf,4096,0);
+	printk("elfentry=%x\n",elf->entry);
 	/* 把每个program segement依次读入内存 */
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
 	eph=ph+elf->phnum;
 	for(;ph<eph;ph++){
-	pa=(unsigned char*)ph->paddr;
-	readseg(pa,ph->filesz,ph->off);
-	for(i=pa+ph->filesz;i<pa+ph->memsz;*i++=0);
+		uint32_t va=ph->vaddr;
+		int data_loaded=0;
+	if(ph->type==1){
+		while(va<ph->vaddr+ph->memsz){
+			memset(pagebuffer,0,4096);
+			uint32_t offset=va&0xfff;
+			va=va&0xfffff000;
+			struct PageInfo *page=page_alloc(1);
+			page_insert(entry_pgdir,page,(void *)va,PTE_U|PTE_W);
+			int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
+			readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
+			memcpy((void *)page2kva(page),pagebuffer,4096);
+
+			va+=4096;
+			data_loaded+=n;
+		}	
+	}
 	}
 	/*跳转到程序中*/
 	//asm volatile("hlt");
-	((void(*)(void))elf->entry)();
+	//boot_map_region(entry_pgdir,0xa0000,320*200,0xa0000,PTE_W|PTE_U);
+	return (void*)elf->entry;
 
 }
 
@@ -57,15 +73,14 @@ readsect(void *dst, int offset) {
 
 /* 将位于磁盘offset位置的count字节数据读入物理地址pa */
 void
-readseg(unsigned char *pa, int count, int offset) {
-	unsigned char *epa;
-	epa = pa + count;
-	pa -= offset % SECTSIZE;
-	offset = (offset / SECTSIZE) + 1;
-	for(; pa < epa; pa += SECTSIZE, offset ++)
-		readsect(pa, offset);
+readseg(unsigned char *va, int count, int offset) {
+	unsigned char *eva;
+	eva = va + count;
+	va -= offset % SECTSIZE;
+	//set game at 201 in Makefile
+	offset = (offset / SECTSIZE) + 201;
+	for(; va < eva; va += SECTSIZE, offset ++)
+		readsect(va, offset);
 }
 
-void readseg_va(uint32_t *va,int count,int offset){
 	
-}

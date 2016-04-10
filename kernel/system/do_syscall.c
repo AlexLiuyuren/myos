@@ -4,6 +4,9 @@
 #include "include/x86.h"
 #include "boot/boot.h"
 #include "include/string.h"
+#include "include/timer.h"
+#include "include/keyboard.h"
+
 
 #ifndef SERIAL_PORT
 #define SERIAL_PORT 0x3F8
@@ -33,6 +36,12 @@ void do_syscall(TrapFrame*tf){
 		case clearscreen:
 			memset((void*)vmembase,tf->ebx,SCR_SIZE);
 			//printk("tf->eax=%d  tf->irq=%d\n",tf->eax,tf->irq);
+			break;
+		case 0:
+			set_timer_intr_handler((void*)tf->ebx);
+			break;
+		case 1:
+			set_keyboard_intr_handler((void*)tf->ebx);
 			break;
 	}
 }

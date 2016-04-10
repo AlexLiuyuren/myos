@@ -105,7 +105,7 @@ void draw_border(void){
 }
 
 void draw_block(int index,uint8_t color){
-	assert((index<10)&&(index>0));
+	//assert((index<10)&&(index>0));
 	int row=(index-1)/3;
 	int line=index%3;
 	if(line==0)

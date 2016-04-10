@@ -45,7 +45,11 @@ irq_handle(struct TrapFrame *tf) {
 	       //printk("hello");
 		printk("%s, %d: key code = %x\n", __FUNCTION__, __LINE__, code);
 		do_keyboard(code);
-	} else {
+	}
+	else if(tf->irq== 1014){
+		
+	}
+	else {
 		assert(0);
 	}
 }
