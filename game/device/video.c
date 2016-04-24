@@ -35,7 +35,8 @@ display_buffer(void) {
 	int i;
 	uint32_t *buf = (uint32_t*)vbuf;
 	uint32_t *ref = (uint32_t*)vref;
-	for (i = 0; i < SCR_SIZE / 4; i ++) {
+	//uint32_t *mem = (uint32_t*)VMEM_ADDR;
+	for (i = 0; i < SCR_SIZE/4 ; i ++) {
 		if (buf[i] != ref[i]) {
 			//mem[i] = buf[i];
 			//printk("displaybuffer\n");
@@ -44,7 +45,10 @@ display_buffer(void) {
 		}
 	}
 #else
+	//asm volatile ("cld; rep movsl" : : "c"(SCR_SIZE / 4), "S"(vbuf), "D"(vmem));	
+	//vmem = VMEM_ADDR;
 	//asm volatile ("cld; rep movsl" : : "c"(SCR_SIZE / 4), "S"(vbuf), "D"(vmem));
+
 	for(i=0;i<SCR_SIZE/4;i++){
 		system_draw_pixel_off(drawpixeloff,i,buf[i]);
 			//printk("displaybuffer\n");

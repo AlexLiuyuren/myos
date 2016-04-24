@@ -50,11 +50,16 @@ page_init(void)
 	//printk("fuck");
 //	while(1);
 	unsigned long i;
-	for (i = npages-1; i > 0x1c9; i--) {
+	for (i = npages-1; i>0x150; i--) {
 		pages[i].pp_ref = 0;
 		pages[i].pp_link = page_free_list;
 		page_free_list = &pages[i];
 	}
+	/*for (i = 0x150; i<npages-1; i++) {
+		pages[i].pp_ref = 0;
+		pages[i].pp_link = page_free_list;
+		page_free_list = &pages[i];
+	}*/
 	return ;
 
 }
@@ -155,6 +160,7 @@ pgdir_walk(pde_t *pgdir, const void *va, int create)
 			return NULL;
 		}
 		else if(!(newpage=page_alloc(ALLOC_ZERO))){
+			printk("no free page\n");
 			return NULL;
 		}
 		else{
@@ -195,9 +201,10 @@ boot_map_region(pde_t *pgdir, uintptr_t va, unsigned long size, physaddr_t pa, i
 	int i;
 	for(i=0;i<size/PGSIZE;i++,va+=PGSIZE){
 		p=pgdir_walk(pgdir,(void*)va,1);
+		//printk("p=%x,*p=%x\n",p,*p);
 		*p=(pa+PGSIZE*i)|perm|PTE_P;
 	}
-	//printk("what the fuck");
+	//printk("f");
 }
 
 //

@@ -2,6 +2,7 @@
 #include"include/game.h"
 #include"include/string.h"
 #include"include/x86.h"
+#include"include/memlayout.h"
 extern pde_t entry_pgdir[];
 void init_cond();
 void init_mem();
@@ -14,13 +15,15 @@ int kernel_main(){
 	printk("after condition init\n");
 	return 0;
 }
-
+extern struct PageInfo pages[];
+//extern char end[];
 void init_cond(){
 	init_idt();
 	init_intr();
 	init_serial();
 	init_timer();
 	init_mem();
+	//printk("end=%x\n",end);
 	//asm volatile("sti");
 	//to store kernel pgd
 	struct PageInfo *page=page_alloc(1);
@@ -30,6 +33,7 @@ void init_cond(){
 	//int *p = (int *)0xa0000;
 	//*p = 0;
 	//while(1);
+	printk("pages=%x",pages);
 	void* eip=loader(pgdir_game);
 	lcr3(cr3_game);
 	printk("eip=%x\n",eip);

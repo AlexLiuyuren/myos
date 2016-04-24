@@ -11,12 +11,12 @@
 #ifndef SERIAL_PORT
 #define SERIAL_PORT 0x3F8
 
-static uint8_t *vmembase=VMEM_ADDR;
+static uint32_t *vmembase=(uint32_t*)VMEM_ADDR;
 void do_syscall(TrapFrame*tf){
 	switch(tf->eax){
 		case drawpixel:{
 			int offset=tf->ebx+tf->ecx*SCR_WIDTH;
-			uint8_t *position=vmembase+offset;
+			uint32_t *position=vmembase+offset;
 			(*position)=tf->edx;
 			//printk("tf->eax=%d  tf->irq=%d\n",tf->eax,tf->irq);
 			}
@@ -28,7 +28,7 @@ void do_syscall(TrapFrame*tf){
 			//printk("tf->eax=%d  tf->irq=%d\n",tf->eax,tf->irq);
 			break;
 		case drawpixeloff:{
-			uint8_t *position=vmembase+tf->ebx;
+			uint32_t *position=vmembase+tf->ebx;
 			(*position)=tf->ecx;
 			//printk("tf->eax=%d  tf->irq=%d\n",tf->eax,tf->irq);
 			}
