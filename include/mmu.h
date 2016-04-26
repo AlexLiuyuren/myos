@@ -144,9 +144,8 @@
 /*
  * Macros to build GDT entries in assembly.
  */
-#define SEG_NULL						\
-	.word 0, 0;						\
-	.byte 0, 0, 0, 0
+#define SEG_NULL				\				.word 0, 0;				\
+	 .byte 0, 0, 0, 0 		
 #define SEG(type,base,lim)					\
 	.word (((lim) >> 12) & 0xffff), ((base) & 0xffff);	\
 	.byte (((base) >> 16) & 0xff), (0x90 | (type)),		\
@@ -274,12 +273,31 @@ struct GateDescriptor {
 	uint32_t offset_31_16     : 16;//high bits of offset in segment
 };
 
-
+struct Gatedesc{
+	unsigned gd_off_15_0      : 16;//low 16bit of offset in segment
+	unsigned gd_sel          : 16;//segment selector
+	unsigned gd_args:5;
+	unsigned gd_rsv1:3;
+	unsigned gd_type:4;
+	unsigned gd_s:1;
+	unsigned gd_dpl:2;
+	unsigned gd_p:1;
+	unsigned gd_off_31_16:16;
+};
 
 typedef struct TrapFrame {
 	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;
+	uint16_t es,pad0;
+	uint16_t ds,pad1;
 	int32_t irq;
 	uint32_t error_code;
+	uint32_t eip;
+	uint16_t cs;
+	uint16_t pad2;
+	uint32_t eflags;
+	uint32_t esp;
+	uint16_t ss;
+	uint16_t pad3;
 }TrapFrame;
 
 

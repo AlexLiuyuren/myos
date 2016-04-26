@@ -28,6 +28,8 @@
 .globl asm_do_irq
 .extern irq_handle
 asm_do_irq:
+	pushl %ds
+	pushl %es
 	pushal
 
 	pushl %esp			# ???
