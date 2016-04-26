@@ -5,6 +5,7 @@
 #include"include/memlayout.h"
 extern pde_t entry_pgdir[];
 void init_cond();
+void init_segment();
 void init_mem();
 void* loader();
 int kernel_main(){
@@ -18,6 +19,7 @@ int kernel_main(){
 extern struct PageInfo pages[];
 //extern char end[];
 void init_cond(){
+//	init_segment();
 	init_idt();
 	init_intr();
 	init_serial();
