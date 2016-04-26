@@ -1,5 +1,6 @@
 #include "include/env.h"
 #include "include/mmu.h"
+#include "include/boot.h"
 #include "include/memlayout.h"
 #include "include/error.h"
 #include "include/pmap.h"
@@ -134,7 +135,7 @@ static void region_alloc(struct Env*e, void *va, size_t len){
 	}
 }
 
-static void load_icode(struct Env*e,uint8_t *binary,size_t size){
+/*static void load_icode(struct Env*e,uint8_t *binary,size_t size){
 	struct Elf* ELFHDR=(struct Elf*)binary;
 	struct Proghdr *ph,*eph;
 	if(ELFHDR->e_magic!=ELF_MAGIC){
@@ -156,12 +157,67 @@ static void load_icode(struct Env*e,uint8_t *binary,size_t size){
 	lcr3(PADDR(kern_pgdir));
 	e->env_tf.eip=ELFHDR->e_entry;
 	region_alloc(e,(void*)(USTACKTOP-PGSIZE),PGSIZE);
+}*/
+
+unsigned char env_buffer[4096];
+static void load_icode(struct Env*e,pde_t *entry_pgdir){
+	
+	/*struct Elf* ELFHDR=(struct Elf*)binary;
+	struct Proghdr *ph,*eph;
+	if(ELFHDR->e_magic!=ELF_MAGIC){
+		printk("magic error\n");
+		return ;
+	}
+		//panic("magic error");
+
+	ph=(struct Proghdr*)((uint8_t *)ELFHDR+ELFHDR->e_phoff);
+	eph=ph+ELFHDR->e_phnum;
+	lcr3(PADDR(e->env_pgdir));
+	for(;ph<eph;ph++){
+		if(ph->p_type==ELF_PROG_LOAD){
+			region_alloc(e,(void*)ph->p_va,ph->p_memsz);
+			memset((void*)ph->p_va,0,ph->p_memsz);
+			memcpy((void*)ph->p_va,binary+ph->p_offset,ph->p_filesz);
+		}
+	}*/
+	struct ELFHeader *elf;
+	struct ProgramHeader *ph,*eph;
+	unsigned char pagebuffer[4096];
+	
+	elf=(struct ELFHeader*)env_buffer;
+	readseg((unsigned char *)elf,4096,0);
+	printk("elfentry=%x\n",elf->entry);
+
+	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
+	eph=ph+elf->phnum;
+	for(;ph<eph;ph++){
+		uint32_t va=ph->vaddr;
+		int data_loaded=0;
+		if(ph->type==1){
+			while(va<ph->vaddr+ph->memsz){
+				memset(pagebuffer,0,4096);
+				uint32_t offset=va&0xfff;
+				va=va&0xfffff000;
+				struct PageInfo*page=page_alloc(1);
+				page_insert(entry_pgdir,page,(void*)va,PTE_U|PTE_W);
+				int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
+				readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
+				memcpy((void *)page2kva(page),pagebuffer,4096);
+				va+=4096;
+				data_loaded+=n;
+			
+			}
+		}
+	}
+	lcr3(PADDR(kern_pgdir));
+	e->env_tf.eip=elf->entry;
+	region_alloc(e,(void*)(USTACKTOP-PGSIZE),PGSIZE);
 }
 
 void env_create(uint8_t *binary, size_t size, enum EnvType type){
 	struct Env *penv;
 	env_alloc(&penv,0);
-	load_icode(penv,binary,size);
+	//load_icode(penv,binary,size);
 }
 
 void env_free(struct Env* e){

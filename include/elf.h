@@ -62,4 +62,9 @@ struct Secthdr {
 // Values for Secthdr::sh_name
 #define ELF_SHN_UNDEF		0
 
+void readseg(unsigned char *,int,int);
+extern struct PageInfo* page_free_list;
+void waitdisk(void);
+void readsect(void *,int );
+void readseg(unsigned char *,int,int);
 #endif /* !JOS_INC_ELF_H */
