@@ -12,7 +12,8 @@
 #include "include/env.h"
 #include "include/string.h"
 #include "kernel/process/env.h"
-struct Env* envs=NULL;
+struct Env ENVS[NENV];
+struct Env* envs=ENVS;
 struct Env* curenv=NULL;
 static struct Env* env_free_list;
 extern pde_t entry_pgdir[];  
@@ -214,10 +215,10 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 	region_alloc(e,(void*)(USTACKTOP-PGSIZE),PGSIZE);
 }
 
-void env_create(uint8_t *binary, size_t size, enum EnvType type){
+void env_create(){
 	struct Env *penv;
 	env_alloc(&penv,0);
-	//load_icode(penv,binary,size);
+	load_icode(penv,kern_pgdir);
 }
 
 void env_free(struct Env* e){
@@ -256,6 +257,7 @@ void env_destroy(struct Env *e){
 
 
 void env_pop_tf(struct TrapFrame* tf){
+printk("es: %d\n", tf->es);
 	 asm volatile(
 		"movl %0,%%esp\n"
 		"\tpopal\n"

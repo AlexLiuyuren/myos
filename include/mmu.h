@@ -287,8 +287,10 @@ struct Gatedesc{
 
 typedef struct TrapFrame {
 	uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;
-	uint16_t es,pad0;
-	uint16_t ds,pad1;
+	uint16_t es;
+	uint16_t pad0;
+	uint16_t ds;
+	uint16_t pad1;
 	int32_t irq;
 	uint32_t error_code;
 	uint32_t eip;

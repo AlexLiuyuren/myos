@@ -3,6 +3,9 @@
 #include"include/string.h"
 #include"include/x86.h"
 #include"include/memlayout.h"
+#include"kernel/process/env.h"
+
+#include "include/mmu.h"
 extern pde_t entry_pgdir[];
 void init_cond();
 void init_segment();
@@ -19,27 +22,34 @@ int kernel_main(){
 extern struct PageInfo pages[];
 //extern char end[];
 void init_cond(){
-//	init_segment();
+	init_segment();
 	init_idt();
 	init_intr();
 	init_serial();
 	init_timer();
 	init_mem();
-	//printk("end=%x\n",end);
-	//asm volatile("sti");
-	//to store kernel pgd
+	//asm volatile("int $14");
+	/*env_init();
+	env_create();
+	printk("snvs0.ts=%x\n",&envs[0]);
+	struct TrapFrame tf;
+	tf.es = 0x23;
+	env_pop_tf(&tf);*/
+	/*envs[0].env_tf.edi = 1;
+	envs[0].env_tf.esi = 2;
+	envs[0].env_tf.ebp = 3;
+	envs[0].env_tf.esp = 4;
+	envs[0].env_tf.es= 4;
+	env_run(&envs[0]);*/
 	struct PageInfo *page=page_alloc(1);
 	uint32_t cr3_game=page2pa(page);
 	pde_t *pgdir_game=page2kva(page);
 	memcpy(pgdir_game,entry_pgdir,4096);
-	//int *p = (int *)0xa0000;
-	//*p = 0;
-	//while(1);
 	printk("pages=%x",pages);
 	void* eip=loader(pgdir_game);
 	lcr3(cr3_game);
 	printk("eip=%x\n",eip);
 	((void(*)(void))eip)();
 	printk("shouldn't reach here");
-
+	
 }
