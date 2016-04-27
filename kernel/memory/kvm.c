@@ -2,6 +2,7 @@
 #include "include/string.h"
 #include "include/x86.h"
 #include "include/mmu2.h"
+#include "include/stdio.h"
 //#include "common.h"
 /* One TSS will be enough for all processes in ring 3. It will be used in Lab3. */
 static TSS tss; 
@@ -10,7 +11,7 @@ extern char bootstacktop[];
 inline static void
 set_tss(SegDesc *ptr) {
 	tss.ss0 = SELECTOR_KERNEL(SEG_KERNEL_DATA);		// only one ring 0 stack segment
-	tss.esp0=(uint32_t)bootstacktop;
+	//tss.esp0=(uint32_t)bootstacktop;
 	uint32_t base = (uint32_t)&tss;
 	uint32_t limit = sizeof(TSS) - 1;
 	ptr->limit_15_0  = limit & 0xffff;
@@ -31,7 +32,7 @@ set_tss(SegDesc *ptr) {
 
 
 /* GDT in the kernel's memory, whose virtual memory is greater than 0xC0000000. */
-SegDesc gdt[10];
+static SegDesc gdt[10];
 
 static void
 set_segment(SegDesc *ptr, uint32_t pl, uint32_t type) {
@@ -68,12 +69,10 @@ init_segment(void) {
 	set_segment(&gdt[SEG_KERNEL_DATA], DPL_KERNEL, SEG_WRITABLE );
 	set_segment(&gdt[SEG_USER_CODE], DPL_USER, SEG_EXECUTABLE|SEG_READABLE );
 	set_segment(&gdt[SEG_USER_DATA], DPL_USER, SEG_WRITABLE );
-//printk("woshigou\n");
 	write_gdt(gdt, sizeof(gdt));
-
 	set_tss(&gdt[SEG_TSS]);
-	
 	//set_tss_ss0(SELECTOR_KERNEL(SEG_KERNEL_DATA));
 	ltr( SELECTOR_USER(SEG_TSS) );
+//	ltr( SEG_TSS<<3 );
 }
 
