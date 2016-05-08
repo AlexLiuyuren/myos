@@ -25,7 +25,7 @@ set_trap(struct GateDescriptor *ptr, uint32_t selector, uint32_t offset, uint32_
 	ptr->offset_15_0 = offset & 0xFFFF;
 	ptr->segment = selector << 3;
 	ptr->pad0 = 0;
-	ptr->type = TRAP_GATE_32;
+	ptr->type = INTERRUPT_GATE_32;
 	ptr->system = false;
 	ptr->privilege_level = dpl;
 	ptr->present = true;
@@ -87,7 +87,7 @@ void init_idt() {
 	set_trap(idt + 13, SEG_KERNEL_CODE, (uint32_t)vec13, DPL_KERNEL);
 	set_trap(idt + 14, SEG_KERNEL_CODE, (uint32_t)vec14, DPL_KERNEL);
 	//the system call 0x80
-	set_trap(idt + 0x80, SEG_KERNEL_CODE, (uint32_t)vecsys, DPL_KERNEL);
+	set_trap(idt + 0x80, SEG_KERNEL_CODE, (uint32_t)vecsys, DPL_USER);
 
 	/* 设置外部中断的处理 */
 	set_intr(idt + 32, SEG_KERNEL_CODE, (uint32_t)irq0, DPL_KERNEL);

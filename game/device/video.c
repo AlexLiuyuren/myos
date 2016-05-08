@@ -40,7 +40,7 @@ display_buffer(void) {
 		if (buf[i] != ref[i]) {
 			//mem[i] = buf[i];
 			//printk("displaybuffer\n");
-			system_draw_pixel_off(drawpixeloff,i,buf[i]);
+			system_draw_pixel_off(i,buf[i]);
 			ref[i]=buf[i];
 		}
 	}
@@ -50,7 +50,7 @@ display_buffer(void) {
 	//asm volatile ("cld; rep movsl" : : "c"(SCR_SIZE / 4), "S"(vbuf), "D"(vmem));
 
 	for(i=0;i<SCR_SIZE/4;i++){
-		system_draw_pixel_off(drawpixeloff,i,buf[i]);
+		system_draw_pixel_off(i,buf[i]);
 			//printk("displaybuffer\n");
 	}
 #endif
@@ -64,22 +64,22 @@ display_buffer(void) {
 void
 blue_screen(){
 	//memset((void *)vmem,1,SCR_SIZE);
-	system_clear_screen(clearscreen,1);
+	system_clear_screen(1);
 }
 void
 white_screen(){
 	//memset((void *)vmem,15,SCR_SIZE);
-	system_clear_screen(clearscreen,15);
+	system_clear_screen(15);
 }
 void
 black_screen(){
 	//memset((void *)vmem,0,SCR_SIZE);
-	system_clear_screen(clearscreen,0);
+	system_clear_screen(0);
 }
 void
 yellow_screen(){
 	//memset((void *)vmem,14,SCR_SIZE);
-	system_clear_screen(clearscreen,14);
+	system_clear_screen(14);
 }
 int quater_width=SCR_HEIGHT/4;
 int quater_height=SCR_HEIGHT/4;

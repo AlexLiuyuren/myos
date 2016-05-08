@@ -10,20 +10,49 @@ syscall(int id,...){
 }
 
 
-void system_draw_pixel(int eax,int x,int y,int color){
-	syscall(eax,x,y,color);
+void system_draw_pixel(int x,int y,int color){
+	syscall(drawpixel,x,y,color);
 }
 
-void system_serial_print(int eax,char ch){
+void system_serial_print(char ch){
 	//printk("eax=%d ch=%d\n",eax,ch);
 	//while(1);
-	syscall(eax,ch);
+	syscall(serialprint,ch);
 }
 
-void system_draw_pixel_off(int eax,int off,int color){
-	syscall(eax,off,color);
+void system_init_serial(){
+	syscall(initserial);
+}
+void system_init_timer(){
+	syscall(inittimer);
+}
+/*void system_sleep(int eax,int time){
+	syscall(eax,time);
+}*/
+
+void system_draw_pixel_off(int off,int color){
+	syscall(drawpixeloff,off,color);
 }
 
-void system_clear_screen(int eax,int color){
-	syscall(eax,color);
+void system_clear_screen(int color){
+	syscall(clearscreen,color);
+}
+
+void system_enable_interrupt(){
+	syscall(enableinterrupt);
+}
+void system_disenable_interrupt(){
+	syscall(disenableinterrupt);
+}
+
+int system_env_fork(){
+	return syscall(env_fork);
+}
+
+void system_env_sleep(uint32_t time){
+	syscall(env_sleep,time);
+}
+
+void system_env_exit(){
+	syscall(env_exit);
 }

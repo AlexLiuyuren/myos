@@ -6,6 +6,7 @@
 #include "include/string.h"
 #include "include/timer.h"
 #include "include/keyboard.h"
+#include "include/game.h"
 
 
 #ifndef SERIAL_PORT
@@ -43,7 +44,30 @@ void do_syscall(TrapFrame*tf){
 		case 1:
 			set_keyboard_intr_handler((void*)tf->ebx);
 			break;
-	}
+		case initserial:
+			init_serial();
+			break;
+		case inittimer:
+			init_timer();
+			break;
+		case enableinterrupt:
+			asm volatile("sti");
+			break;
+		case disenableinterrupt:
+			asm volatile("cli");
+			break;
+		case env_fork:
+			system_env_fork();
+			break;
+		case env_sleep:
+			printk("sleep hhhhh!\n");
+			system_env_sleep((uint32_t)tf->ebx);
+			break;
+		case env_exit:
+			system_env_exit();
+			break;
+		//case sleep:	
+ 		}
 }
 
 #endif

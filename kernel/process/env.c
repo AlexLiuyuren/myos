@@ -57,6 +57,7 @@ int envid2env(envid_t envid,struct Env **env_store, bool checkperm){
 void env_init(void){
 	int i;
 	for(i=NENV-1;i>=0;i--){
+		envs[i].env_status=ENV_FREE;
 		envs[i].env_id=0;
 		envs[i].env_link=env_free_list;
 		env_free_list=envs+i; 
@@ -103,7 +104,7 @@ int env_alloc(struct Env**newenv_store,envid_t parent_id){
 	if(generation<=0)
 		generation=1<<ENVGENSHIFT;
 	e->env_id=generation|(e-envs);
-	printk("envs:%x,e:%x,e->env_id:%x\n",envs,e,e->env_id);
+	//printk("envs:%x,e:%x,e->env_id:%x\n",envs,e,e->env_id);
 	e->env_parent_id=parent_id;
 	e->env_type=ENV_TYPE_USER;
 	e->env_status=ENV_RUNNABLE;
@@ -115,6 +116,8 @@ int env_alloc(struct Env**newenv_store,envid_t parent_id){
 	e->env_tf.ss=GD_UD|3;
 	e->env_tf.esp=USTACKTOP;
 	e->env_tf.cs=GD_UT|3;
+	e->env_tf.eflags=0x202;
+	//e->env_tf.eflags=0x2;
 
 	env_free_list=e->env_link;
 	*newenv_store=e;
@@ -181,6 +184,7 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 			memcpy((void*)ph->p_va,binary+ph->p_offset,ph->p_filesz);
 		}
 	}*/
+
 	struct ELFHeader *elf;
 	struct ProgramHeader *ph,*eph;
 	unsigned char pagebuffer[4096];
@@ -210,7 +214,8 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 			}
 		}
 	}
-	lcr3(PADDR(kern_pgdir));
+	//lcr3(PADDR(kern_pgdir));
+	e->env_pgdir=entry_pgdir;
 	e->env_tf.eip=elf->entry;
 	region_alloc(e,(void*)(USTACKTOP-PGSIZE),PGSIZE);
 }
@@ -218,7 +223,12 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 void env_create(){
 	struct Env *penv;
 	env_alloc(&penv,0);
-	load_icode(penv,kern_pgdir);
+	struct PageInfo *page=page_alloc(1);
+	uint32_t cr3_game=page2pa(page);
+	pde_t *pgdir_game=page2kva(page);
+	memcpy(pgdir_game,entry_pgdir,4096);
+	load_icode(penv,pgdir_game);
+	lcr3(cr3_game);
 }
 
 void env_free(struct Env* e){
@@ -226,10 +236,9 @@ void env_free(struct Env* e){
 	uint32_t pdeno,pteno;
 	physaddr_t pa;
 	if(e==curenv)
-		lcr3(PADDR(kern_pgdir));
-	//static_assert(UTOP%PTSIZE==0);
+		lcr3(PADDR(entry_pgdir));
 	for(pdeno=0;pdeno<PDX(UTOP);pdeno++){
-		if(!(e->env_pgdir[pdeno])&PTE_P)
+		if(!((e->env_pgdir[pdeno])&PTE_P)||(entry_pgdir[pdeno]&PTE_P))
 			continue;
 		pa=PTE_ADDR(e->env_pgdir[pdeno]);
 		pt=(pte_t*)KADDR(pa);
@@ -252,12 +261,12 @@ void env_free(struct Env* e){
 
 void env_destroy(struct Env *e){
 	env_free(e);
-	while(1);
+	//while(1);
 }
 
 
 void env_pop_tf(struct TrapFrame* tf){
-printk("es: %d\n", tf->es);
+//printk("es: %d\n", tf->es);
 	 asm volatile(
 		"movl %0,%%esp\n"
 		"\tpopal\n"
@@ -271,12 +280,17 @@ printk("es: %d\n", tf->es);
 }
 
 void env_run(struct Env* e){
+	if (e==NULL){
+		printk("no env\n");
+		while(1);
+	}
 	if(curenv!=e){
 		curenv=e;
 		e->env_status=ENV_RUNNING;
 		e->env_runs++;
 		lcr3(PADDR(e->env_pgdir));
 	}
+	//printk("env_tf env_run %x\n",&e->env_tf);
 	env_pop_tf(&e->env_tf);
 }
 

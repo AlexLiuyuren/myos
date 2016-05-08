@@ -14,7 +14,8 @@ enum{
 	ENV_DYING,
 	ENV_RUNNABLE,
 	ENV_RUNNING,
-	ENV_NOT_RUNNABLE
+	ENV_NOT_RUNNABLE,
+	ENV_SLEEP
 };
 
 enum EnvType{
@@ -29,11 +30,16 @@ struct Env{
 	enum EnvType env_type;
 	unsigned env_status;
 	uint32_t env_runs;
+	uint32_t sleep_time;
 	//int env_cpunum;
 	pde_t *env_pgdir;//kernel virtual address of page dir 
 	//void *env_pgfault_upcall;
 
 };
+extern struct Env*envs;
+extern struct Env*curenv;
+
+
 #endif
 
 

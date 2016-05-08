@@ -58,7 +58,7 @@ KERNEL_O += $(KERNEL_S:%.S=$(OBJ_DIR)/%.o)
 
 GAME_C := $(shell find $(GAME_DIR) -name "*.c")
 GAME_S := $(shell find $(GAME_DIR) -name "*.S")
-#KERNEL_S := $(wildcard $(KERNEL_DIR)/*.S)
+KERNEL_S := $(wildcard $(KERNEL_DIR)/*.S)
 GAME_O := $(GAME_C:%.c=$(OBJ_DIR)/%.o)
 GAME_O += $(GAME_S:%.S=$(OBJ_DIR)/%.o)
 
@@ -88,7 +88,7 @@ $(KERNEL): $(KERNEL_O) $(LIB_O)
 $(GAME): $(GAME_O) $(LIB_O)
 	#echo $(GAME_O)
 	#ehco "*************"
-	$(LD) -m elf_i386 -e game_main -nostdlib -o $@ $^ $(shell $(CC) $(CFLAGS) -print-libgcc-file-name)
+	$(LD) -m elf_i386 -e fork_test -nostdlib -o $@ $^ $(shell $(CC) $(CFLAGS) -print-libgcc-file-name)
 
 
 

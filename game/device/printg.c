@@ -5,7 +5,7 @@
 
 static void 
 putch_g(int ch,int *cnt){
-	system_serial_print(serialprint,ch);
+	system_serial_print(ch);
 	(*cnt)++;
 }
 

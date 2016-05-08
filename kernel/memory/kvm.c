@@ -11,7 +11,7 @@ extern char bootstacktop[];
 inline static void
 set_tss(SegDesc *ptr) {
 	tss.ss0 = SELECTOR_KERNEL(SEG_KERNEL_DATA);		// only one ring 0 stack segment
-	//tss.esp0=(uint32_t)bootstacktop;
+	tss.esp0=(uint32_t)bootstacktop;
 	uint32_t base = (uint32_t)&tss;
 	uint32_t limit = sizeof(TSS) - 1;
 	ptr->limit_15_0  = limit & 0xffff;

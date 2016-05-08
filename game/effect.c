@@ -3,6 +3,7 @@
 #include "include/assert.h"
 #include "include/keyboard.h"
 #include "include/video.h"
+#include "game/include/printg.h"
 typedef struct {
 	int num;
 	int isempty;//0,1,2
