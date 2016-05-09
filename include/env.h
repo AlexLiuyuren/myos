@@ -31,6 +31,7 @@ struct Env{
 	unsigned env_status;
 	uint32_t env_runs;
 	uint32_t sleep_time;
+	uint32_t threadnum;
 	//int env_cpunum;
 	pde_t *env_pgdir;//kernel virtual address of page dir 
 	//void *env_pgfault_upcall;

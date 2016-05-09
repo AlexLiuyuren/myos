@@ -7,6 +7,7 @@
 #include "include/timer.h"
 #include "include/keyboard.h"
 #include "include/game.h"
+#include "include/semaphore.h"
 
 
 #ifndef SERIAL_PORT
@@ -66,8 +67,20 @@ void do_syscall(TrapFrame*tf){
 		case env_exit:
 			system_env_exit();
 			break;
-		//case sleep:	
- 		}
+		//case sleep:
+		case semopen:
+			semaphore_open((int)tf->ebx,(bool)tf->ecx,(int)tf->edx);
+			break;
+		case semclose:
+			semaphore_close((int)tf->ebx);
+			break;
+		case semwait:
+			semaphore_wait((int)tf->ebx);
+			break;
+ 		case sempost:
+			semaphore_post((int)tf->ebx);
+			break;
+}
 }
 
 #endif

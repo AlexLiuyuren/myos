@@ -68,6 +68,24 @@ int system_env_fork(){
 	return env->env_id;
 }
 
+int system_pthread_create(void *p){
+	int i,j;
+	envid_t p_id=curenv->env_id;
+	struct Env *env=NULL;
+	int judge=env_alloc(&env,p_id);
+	if(judge!=0){
+		printk("env_alloc error!");
+		return judge;
+	}
+	env->env_pgdir=curenv->env_pgdir;
+	curenv->threadnum++;
+	env->env_tf=curenv->env_tf;
+	env->env_tf.esp=curenv->env_tf.esp-curenv->threadnum*PGSIZE;
+	env->env_tf.eip=p;
+	env->env_tf.eax=0;//as the return value of process
+	return env->env_id;
+}
+
 void system_env_sleep(uint32_t time){
 	curenv->env_status=ENV_SLEEP;
 	curenv->sleep_time=time;
@@ -77,7 +95,7 @@ void system_env_sleep(uint32_t time){
 
 void system_env_exit(){
 	curenv->env_status=ENV_DYING;
-	env_destroy(curenv);
+	//env_destroy(curenv);
 	/*int i;
 	for(i=0;i<NENV;i++){
 		if(envs[i].env_status==ENV_RUNNABLE)
