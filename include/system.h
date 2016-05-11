@@ -28,6 +28,7 @@ void system_enable_interrupt();
 void system_disenable_interrupt();
 int system_env_fork();
 int system_pthread_create(void *);
+int pthread_create(void *);
 void system_env_sleep(uint32_t);
 void system_env_exit();
 struct Env*seek_next_runnable();

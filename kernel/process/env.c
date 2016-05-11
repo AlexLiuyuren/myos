@@ -15,7 +15,7 @@
 struct Env ENVS[NENV];
 struct Env* envs=ENVS;
 struct Env* curenv=NULL;
-static struct Env* env_free_list;
+struct Env* env_free_list;
 extern pde_t entry_pgdir[];  
 pde_t *kern_pgdir=entry_pgdir;
 //extern SegDesc gdt[];
@@ -126,7 +126,7 @@ int env_alloc(struct Env**newenv_store,envid_t parent_id){
 	return 0;
 }
 
-static void region_alloc(struct Env*e, void *va, size_t len){
+ void region_alloc(struct Env*e, void *va, size_t len){
 	void *begin=ROUNDDOWN(va,PGSIZE);
 	void *end=ROUNDUP(va+len,PGSIZE);
 	for(;begin<end;begin+=PGSIZE){
@@ -192,7 +192,7 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 	
 	elf=(struct ELFHeader*)env_buffer;
 	readseg((unsigned char *)elf,4096,0);
-	printk("elfentry=%x\n",elf->entry);
+	//printk("elfentry=%x\n",elf->entry);
 
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
 	eph=ph+elf->phnum;
@@ -218,7 +218,7 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 	//lcr3(PADDR(kern_pgdir));
 	e->env_pgdir=entry_pgdir;
 	e->env_tf.eip=elf->entry;
-	region_alloc(e,(void*)(USTACKTOP-PGSIZE),PGSIZE);
+	region_alloc(e,(void*)(USTACKTOP-1024*PGSIZE),1024*PGSIZE);
 }
 
 void env_create(){
@@ -292,7 +292,7 @@ void env_run(struct Env* e){
 		lcr3(PADDR(e->env_pgdir));
 	}
 	//printk("env_tf env_run %x\n",&e->env_tf);
-	printk("env->id=%d\n",env->env_id);
+	//printk("env->id=%d\n",e->env_id);
 	env_pop_tf(&e->env_tf);
 }
 

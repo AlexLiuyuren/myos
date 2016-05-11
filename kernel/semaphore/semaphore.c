@@ -1,6 +1,6 @@
 #include "include/semaphore.h"
 
-extern semaphore_t semaphore[1000];
+semaphore_t semaphore[1000];
 void init_semaphore(){
 	int i;
 	for(i=0;i<1000;i++){

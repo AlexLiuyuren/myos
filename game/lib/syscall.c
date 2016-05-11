@@ -57,8 +57,8 @@ void system_env_exit(){
 	syscall(env_exit);
 }
 
-void system_pthread_create((void *)func){
-	syscall(pthreadcreate,func);
+int system_pthread_create(void *func){
+	return syscall(pthreadcreate,func);
 }
 
 void sem_open(int index,bool binary,int value){

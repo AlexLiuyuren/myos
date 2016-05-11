@@ -17,8 +17,9 @@ typedef struct{
 	bool binary_num;
 	int num;
 	struct Env* wait_list;
-}semaphore_t
+}semaphore_t;
 
+extern semaphore_t semaphore[];
 void init_semaphore();
 void  semaphore_open(int ,bool,int);
 void semaphore_close(int );

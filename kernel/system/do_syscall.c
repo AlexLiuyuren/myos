@@ -68,6 +68,9 @@ void do_syscall(TrapFrame*tf){
 			system_env_exit();
 			break;
 		//case sleep:
+		case pthreadcreate:
+			pthread_create((void *)tf->ebx);
+			break;
 		case semopen:
 			semaphore_open((int)tf->ebx,(bool)tf->ecx,(int)tf->edx);
 			break;

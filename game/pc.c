@@ -2,14 +2,14 @@
 #include "include/semaphore.h"
 #include "game/include/printg.h"
 int items[10];
-
+int itemid;
 void producer(void){
-	int temp,i;
+	int i;
 	while(1){
-		temp=sem_wait(empty);
+		printg("producer: \n");
+		sem_wait(empty);
 		sem_wait(mutex);
-		items[temp]=1;
-		printg("producer: ");
+		items[itemid++]=1;
 		for(i=0;i<10;i++){
 			printg("%d ",items[i]);
 		}
@@ -20,12 +20,12 @@ void producer(void){
 }
 
 void consumer(void){
-	int temp;
+	int i;
 	while(1){
-		temp=sem_wait(full);	
+		printg("consumer: \n");
+		sem_wait(full);	
 		sem_wait(mutex);
-		items[temp]=0;
-		printg("consumer: ");
+		items[--itemid]=0;
 		for(i=0;i<10;i++){
 			printg("%d ",items[i]);
 		}
@@ -36,6 +36,8 @@ void consumer(void){
 }
 int pc_main(){
 	int i;
+	itemid=0;
+	printg("pc_main:\n");
 	sem_open(mutex,true,1);
 	sem_open(empty,false,slotN);
 	sem_open(full,false,0);
