@@ -1,0 +1,4311 @@
+qemu-system-i386 -serial stdio  -monitor telnet:127.0.0.1:1111,server,nowait  disk.bin
+pc_main:
+producer: 
+1 0 0 0 0 0 0 0 0 0 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+producer: 
+1 1 1 1 1 0 0 0 0 0 
+producer: 
+1 1 1 1 1 1 0 0 0 0 
+producer: 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer1 1 1 1 1 1 1 1 1 0 
+producer: 
+: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 consumer: 
+consumer: 
+consumer: 
+consumer: 
+1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 producer: 
+consumer: 
+producer: 
+consumer: 
+consumer: 
+0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+producer: 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+coconsumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+nsumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producconsumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 
+consumer: 
+er: 
+consumer: 
+producer: 
+consumer: 
+1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+cproducer: 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+coconsumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+nsumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 1 1consumer: 
+consumer: 
+consumer: 
+onsumer: 
+ 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consuproducer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0consumer: 
+consumer: 
+mer: 
+ 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 producer: 
+consumer: 
+producer: 
+consumer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+producer: 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producerconsumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0consumer: 
+: 
+consumer: 
+producer: 
+consumer: 
+consumer: 
+ 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+ 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+coproducer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1producer: 
+consumer: 
+producer: 
+consumer: 
+nsumer: 
+ 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+producer: 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+consumeproducer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 1 1 1 1 1 1 1 1 1 0 
+producer: 
+
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 consumer: 
+1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+r: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 1 1 0 consumer: 
+producer: 
+consumer: 
+consumer: 
+consumer: 
+
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+consumer: 
+ 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 0 0 0 
+producer: 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+producer: 
+consumer: 
+1 1 1 1 1 1 1 0 0 0 
+1 1 1 1 1 1 1 1 0 0 
+prodconsumer: 
+1 1 1 1 1 1 1 0 0 0 
+consumer: 
+1 1 1 1 1 1 0 0 0 0 
+consumer: 
+1 1 1 1 1 0 0 0 0 0 
+consumer: 
+1 1 1 1 0 0 0 0 0 0 
+consumer: 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+ucer: 
+ 1 1 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+consumer: 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0consumer: 
+producer: 
+ 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 producer: 
+producer: 
+producer: 
+consumer: 
+producer: 
+0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0consumer: 
+producer: 
+consumer: 
+producer: 
+consumer: 
+producer: 
+ 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 1 1 0 0 0 0 0 
+1 1 1 1 0 0 0 0 0 0 
+consumer: 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 1 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+consumer: 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 1 0 0 0 consumer: 
+producer: 
+0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+consumer: 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
+producer: 
+1 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 
+consumer: 
