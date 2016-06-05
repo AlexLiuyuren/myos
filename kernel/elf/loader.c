@@ -2,6 +2,8 @@
 #include "include/string.h"
 #include "include/pmap.h"
 #include "include/mmu.h"
+#include "include/disk.h"
+#include "include/fs.h"
 #include "include/memlayout.h"
 
 #define SECTSIZE 512
@@ -17,7 +19,10 @@ loader(pde_t *entry_pgdir) {
 
 	elf = (struct ELFHeader*)buffer;
 	/* 读入ELF文件头 */
-	readseg((unsigned char*)elf,4096,0);
+	//readseg((unsigned char*)elf,4096,0);
+	int fd=0;
+	fs_read(fd,(void*)elf,4096);
+	fs_rewind(fd);
 	printk("elfentry=%x\n",elf->entry);
 	/* 把每个program segement依次读入内存 */
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
@@ -33,7 +38,11 @@ loader(pde_t *entry_pgdir) {
 			struct PageInfo *page=page_alloc(1);
 			page_insert(entry_pgdir,page,(void *)va,PTE_U|PTE_W);
 			int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
-			readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
+			//readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
+			if(n!=0){
+				fs_lseek(fd,ph->off+data_loaded,SEEK_SET);
+				fs_read(fd,(void*)(pagebuffer+offset),n);
+			}
 			memcpy((void *)page2kva(page),pagebuffer,4096);
 
 			va+=4096;
@@ -70,7 +79,22 @@ readsect(void *dst, int offset) {
 		((int *)dst)[i] = in_long(0x1F0);
 	}
 }
+void
+writesect(void *src, int offset) {
+	int i;
+	waitdisk();
+	out_byte(0x1F2, 1);
+	out_byte(0x1F3, offset);
+	out_byte(0x1F4, offset >> 8);
+	out_byte(0x1F5, offset >> 16);
+	out_byte(0x1F6, (offset >> 24) | 0xE0);
+	out_byte(0x1F7, 0x20);
 
+	waitdisk();
+	for (i = 0; i < SECTSIZE / 4; i ++) {
+		out_long(0x1F0,((unsigned int *)src)[i]);
+	}
+}
 /* 将位于磁盘offset位置的count字节数据读入物理地址pa */
 void
 readseg(unsigned char *va, int count, int offset) {

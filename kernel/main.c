@@ -1,4 +1,6 @@
 #include"include/pmap.h"
+#include"include/disk.h"
+#include"include/fs.h"
 #include"include/game.h"
 #include"include/string.h"
 #include"include/x86.h"
@@ -28,6 +30,7 @@ void init_cond(){
 	init_timer();
 	init_mem();
 	init_semaphore();
+	readsect((void*)directory_d.entries,201+256);
 	set_timer_intr_handler(kernel_timer_event);
 	asm volatile("cli");
 	//asm volatile("int $14");

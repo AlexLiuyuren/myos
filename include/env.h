@@ -4,6 +4,7 @@
 #include"include/types.h"
 #include"include/trap.h"
 #include"include/memlayout.h"
+#include"include/fs.h"
 
 typedef int32_t envid_t;
 #define LOG2NENV	10
@@ -32,6 +33,7 @@ struct Env{
 	uint32_t env_runs;
 	uint32_t sleep_time;
 	uint32_t threadnum;
+	Fstate file[NR_FILES];
 	//int env_cpunum;
 	pde_t *env_pgdir;//kernel virtual address of page dir 
 	//void *env_pgfault_upcall;

@@ -52,6 +52,18 @@ in_long(short port) {
 	);
 	return data;
 }
+
+static inline int 
+out_long(short port) {
+	int data;
+	__asm__ __volatile__(
+	"out %0, %1"
+	:"=a"(data)
+	:"d"(port)
+	:"memory"
+	);
+	return data;
+}
 static inline void
 out_byte(short port, char data) {
 	/*请自行加入内联汇编代码*/
