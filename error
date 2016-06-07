@@ -1,15 +1,15 @@
 10000+0 records in
 10000+0 records out
-5120000 bytes (5.1 MB) copied, 0.0278522 s, 184 MB/s
+5120000 bytes (5.1 MB) copied, 0.0294823 s, 174 MB/s
 1+0 records in
 1+0 records out
-512 bytes (512 B) copied, 9.7856e-05 s, 5.2 MB/s
+512 bytes (512 B) copied, 9.8501e-05 s, 5.2 MB/s
 279+1 records in
 279+1 records out
-143276 bytes (143 kB) copied, 0.00100154 s, 143 MB/s
+143320 bytes (143 kB) copied, 0.000984971 s, 146 MB/s
 378+0 records in
 378+0 records out
-193536 bytes (194 kB) copied, 0.00128531 s, 151 MB/s
+193536 bytes (194 kB) copied, 0.00131088 s, 148 MB/s
 SMM: enter
 EAX=00000001 EBX=0000000b ECX=02000000 EDX=00000cfc
 ESI=00000000 EDI=02000000 EBP=00000000 ESP=00006d34

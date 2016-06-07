@@ -33,13 +33,13 @@ void init_cond(){
 	init_semaphore();
 	readsect((void*)directory_d.entries,201+256);
 	printk("filename=%s\n",directory_d.entries[0].filename);
+	env_init();
 	kern_env.file[0].opened=true;
 	kern_env.file[0].offset=0;
 	curenv=&kern_env;
 	set_timer_intr_handler(kernel_timer_event);
 	//asm volatile("cli");
 	//asm volatile("int $14");
-	env_init();
 	env_create(200,0,ENV_TYPE_USER);
 	env_run(&envs[0]);
 	/*printk("snvs0.ts=%x\n",&envs[0]);

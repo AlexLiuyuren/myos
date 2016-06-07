@@ -286,6 +286,7 @@ void env_run(struct Env* e){
 		printk("no env\n");
 		while(1);
 	}
+	printk("env_tf.eip=%x\n",e->env_tf.eip);
 	if(curenv!=e){
 		curenv=e;
 		e->env_status=ENV_RUNNING;

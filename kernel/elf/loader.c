@@ -42,9 +42,9 @@ loader(struct Env*penv,int diskoff) {
 			page_insert(penv->env_pgdir,page,(void *)va,PTE_U|PTE_W);
 			int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
 			if(n!=0){
-				//fs_lseek(fd,ph->off+data_loaded,SEEK_SET);
-			readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded,diskoff);
-				//fs_read(fd,(void*)(pagebuffer+offset),n);
+				fs_lseek(fd,ph->off+data_loaded,SEEK_SET);
+			//readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded,diskoff);
+				fs_read(fd,(void*)(pagebuffer+offset),n);
 			}
 			memcpy((void *)page2kva(page),pagebuffer,4096);
 
@@ -56,7 +56,8 @@ loader(struct Env*penv,int diskoff) {
 	/*跳转到程序中*/
 	//asm volatile("hlt");
 	//boot_map_region(entry_pgdir,0xa0000,320*200,0xa0000,PTE_W|PTE_U);
-	return (void*)elf->entry;
+	
+	//return (void*)elf->entry;
 
 }
 
