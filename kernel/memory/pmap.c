@@ -50,7 +50,7 @@ page_init(void)
 	//printk("fuck");
 //	while(1);
 	unsigned long i;
-	for (i = npages-1; i>0x150; i--) {
+	for (i = npages-1; i>0x200; i--) {
 		pages[i].pp_ref = 0;
 		pages[i].pp_link = page_free_list;
 		page_free_list = &pages[i];

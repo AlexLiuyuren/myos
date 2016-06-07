@@ -11,6 +11,7 @@ static int min(int a,int b)
 int fs_open(const char *pathname, int flags) 
 {
 	int i;
+	//printk("NR_FILES=%d\n",NR_FILES);
 	for(i=0;i<(NR_FILES);i++)
 	{
 		if(strcmp(directory_d.entries[i].filename,pathname)==0)
@@ -21,7 +22,7 @@ int fs_open(const char *pathname, int flags)
 		}
 	}
 	printk("No such file!\n");
-	return -1;
+	return 100;
 }
 
 

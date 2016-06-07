@@ -1,6 +1,7 @@
 #ifndef FS_H
 #define FS_H
-#define NR_FILES (512/sizeof(struct dirent))
+#define NR_FILES 32
+//(512/sizeof(struct dirent))
 #pragma pack(0)
 struct bitmap{
 	char mask[512*256];

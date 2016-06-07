@@ -102,6 +102,7 @@ void exit_test(){
 int fs_test(){
 	printg("game start\n");	
 	int fp1=open("poem1.txt",0);
+	printg("fp1=%d\n",fp1);
 	char poem[10][30];
 	int i;
 	for(i=0;i<4;i++){
