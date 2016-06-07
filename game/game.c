@@ -111,8 +111,10 @@ int fs_test(){
 	}
 	close(fp1);
 	int fp2=open("poem2.txt",0);
+	printg("fp2\n");
 	for(i=0;i<4;i++){
 		 write(fp2,(void*)poem[i],30);
+		 printg("%s\n",poem[i]);
 	}
 	memset(poem,0,sizeof(poem));
 	frewind(fp2);

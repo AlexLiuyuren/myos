@@ -95,7 +95,7 @@ writesect(void *src, int offset) {
 	out_byte(0x1F4, offset >> 8);
 	out_byte(0x1F5, offset >> 16);
 	out_byte(0x1F6, (offset >> 24) | 0xE0);
-	out_byte(0x1F7, 0x20);
+	out_byte(0x1F7, 0x30);
 
 	waitdisk();
 	for (i = 0; i < SECTSIZE / 4; i ++) {

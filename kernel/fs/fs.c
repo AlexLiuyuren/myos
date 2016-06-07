@@ -84,12 +84,13 @@ int fs_write(int fd, void *buf, int len)
 		struct inode node;
 		unsigned int ioff=directory_d.entries[fd].inode_offset;
 		readsect((void*)node.data_block_offsets,ioff+201);
+		//printk("filesz=%d\n",directory_d.entries[fd].file_size);
 		//int length=min(len,directory_d[fd].file_size-curenv->file[fd].offset);
-		int length=len;
+		int length=min(len,directory_d.entries[fd].file_size-curenv->file[fd].offset);
 		unsigned int begin=curenv->file[fd].offset/512;
 		unsigned int begin_off=curenv->file[fd].offset%512;
-		unsigned int end=(curenv->file[fd].offset+len)/512;
-		unsigned int end_off=(curenv->file[fd].offset+len)%512;
+		unsigned int end=(curenv->file[fd].offset+length)/512;
+		unsigned int end_off=(curenv->file[fd].offset+length)%512;
 		
 		if(begin==end){//the reading range is in one block
 			char sect[512];
@@ -97,7 +98,7 @@ int fs_write(int fd, void *buf, int len)
 			for(i=0;i<len;i++){
 				sect[begin_off+i]=((char*)buf)[i];
 			}
-			writesect((void*)sect,node.data_block_offsets[begin]);
+			writesect((void*)sect,node.data_block_offsets[begin]+201);
 		}
 		else{//reading range covers several block
 			char sect[512];
@@ -108,7 +109,7 @@ int fs_write(int fd, void *buf, int len)
 			writesect((void*)sect,node.data_block_offsets[begin]);
 			buf=((char*)buf)+512-begin_off;
 			for(i=begin+1;i<end;i++){
-				writesect(buf,node.data_block_offsets[i]+201);
+				writesect(buf,node.data_block_offsets[i]+201); 
 				buf=((char*)buf)+512;
 			}
 			readsect((void*)sect,node.data_block_offsets[end]+201);

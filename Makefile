@@ -67,7 +67,7 @@ $(IMAGE): $(BOOT) $(KERNEL) $(GAME)
 	@$(DD) if=$(BOOT) of=$(IMAGE) conv=notrunc          > /dev/null # 填充 boot loader
 	@$(DD) if=$(KERNEL) of=$(IMAGE) seek=1 conv=notrunc > /dev/null # 填充 kernel, 跨过 mbr
 	#gdb ./format $(GAME) peom1.dat
-	 ./format $(GAME) poem1.txt
+	 ./format $(GAME) poem1.txt poem2.txt
 	@$(DD) if=data.disk of=$(IMAGE) seek=201 conv=notrunc > /dev/null # 填充 kernel, 跨过 mbr
 #	@$(DD) if=$(GAME) of=$(IMAGE) seek=201 conv=notrunc > /dev/null # 填充 kernel, 跨过 mbr
 $(BOOT): $(BOOT_O)
