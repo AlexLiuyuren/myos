@@ -1,6 +1,7 @@
 #include "include/video.h"
 #include "include/mmu.h"
 #include "include/system.h"
+#include "include/fs.h"
 #include "include/x86.h"
 #include "boot/boot.h"
 #include "include/string.h"
@@ -83,6 +84,25 @@ void do_syscall(TrapFrame*tf){
  		case sempost:
 			semaphore_post((int)tf->ebx);
 			break;
+		case semfopen:
+			fs_open((const char*)tf->ebx,(int)tf->ecx);
+			break;
+		case semfread:
+			fs_read((int)tf->ebx,(void*)tf->ecx,(int)tf->edx);
+			break;
+		case semfwrite:
+			fs_write((int)tf->ebx,(void*)tf->ecx,(int)tf->edx);
+			break;
+		case semflseek:
+			fs_lseek((int)tf->ebx,(int)tf->ecx,(int)tf->edx);
+			break;
+		case semfrewind:
+			fs_rewind((int)tf->ebx);
+			break;
+		case semfclose:
+			fs_close((int)tf->ebx);
+			break;
+
 }
 }
 

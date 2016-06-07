@@ -76,4 +76,26 @@ void sem_post(int index){
 	syscall(sempost,index);
 }
 
+int open(const char*pathname,int flag){
+	return syscall(semfopen,pathname,flag);
+}
+
+int read(int fd,void *buf,int len){
+	return syscall(semfread,fd,buf,len);
+}
+
+int write(int fd,void*buf,int len){
+	return syscall(semfwrite,fd,buf,len);
+}
+
+int lseek(int fd,int offset,int whence){
+	return syscall(semflseek,fd,offset,whence);
+}	
+
+int close(int fd){
+	return syscall(semfclose,fd);
+}
+void frewind(int fd){
+	 syscall(semfrewind,fd);
+}
 

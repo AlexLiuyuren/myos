@@ -58,11 +58,12 @@ int main(int argc,char *argv[]){
 		SET_BIT(i);
 	for(i=1;i<argc;i++){
 		FILE *fp=fopen(argv[i],"rb");
-		if(!fp) {
+		//printf("argv[%d]=%s\n",i,argv[i]);
+		/*if(!fp) {
 			system("pwd");
 			perror("failed:");
-		}
-		printf("argv[%d]=%s\n",i,argv[i]);
+		}*/
+
 		assert(fp);
 		fseek(fp,0,SEEK_END);
 		unsigned int filesz=ftell(fp);

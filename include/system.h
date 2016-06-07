@@ -16,6 +16,12 @@
 #define  semclose (73)
 #define  semwait (74)
 #define  sempost (75)
+#define  semfopen (76)
+#define  semfread (77)
+#define  semfwrite (78)
+#define  semflseek (79)
+#define  semfclose (80)
+#define  semfrewind (81)
 //#define  sleep (68)
 int __attribute__((__noinline__)) syscall(int id,...);
 void system_draw_pixel( int, int, int);
@@ -37,4 +43,12 @@ void sem_open(int index,bool binary,int value);
 void sem_close(int index);
 int sem_wait(int index);
 void sem_post(int index);
+int open(const char*pathname,int flag);
+int read(int fd,void *buf,int len);
+int write(int fd,void *buf,int len);
+int lseek(int fd,int offset,int whence);
+int close(int fd);
+void frewind(int fd);
+
+
 //void system_sleep(int,int);

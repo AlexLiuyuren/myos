@@ -5,24 +5,27 @@
 #include "include/disk.h"
 #include "include/fs.h"
 #include "include/memlayout.h"
+#include "include/env.h"
 
 #define SECTSIZE 512
 
-void readseg(unsigned char *, int, int);
 extern struct PageInfo* page_free_list; 
 unsigned char buffer[4096];
 void*
-loader(pde_t *entry_pgdir) {
+loader(struct Env*penv,int diskoff) {
 	struct ELFHeader *elf;
 	struct ProgramHeader *ph, *eph;
 	unsigned char pagebuffer[4096];
+	//int i;
 
 	elf = (struct ELFHeader*)buffer;
 	/* 读入ELF文件头 */
-	//readseg((unsigned char*)elf,4096,0);
+//	readseg((unsigned char*)elf,4096,0,diskoff);
 	int fd=0;
 	fs_read(fd,(void*)elf,4096);
 	fs_rewind(fd);
+	printk("directory_d.entries[0]=%s\n",directory_d.entries[0].filename);
+	printk("elfmagic=%x\n",elf->magic);
 	printk("elfentry=%x\n",elf->entry);
 	/* 把每个program segement依次读入内存 */
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
@@ -36,12 +39,12 @@ loader(pde_t *entry_pgdir) {
 			uint32_t offset=va&0xfff;
 			va=va&0xfffff000;
 			struct PageInfo *page=page_alloc(1);
-			page_insert(entry_pgdir,page,(void *)va,PTE_U|PTE_W);
+			page_insert(penv->env_pgdir,page,(void *)va,PTE_U|PTE_W);
 			int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
-			//readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
 			if(n!=0){
-				fs_lseek(fd,ph->off+data_loaded,SEEK_SET);
-				fs_read(fd,(void*)(pagebuffer+offset),n);
+				//fs_lseek(fd,ph->off+data_loaded,SEEK_SET);
+			readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded,diskoff);
+				//fs_read(fd,(void*)(pagebuffer+offset),n);
 			}
 			memcpy((void *)page2kva(page),pagebuffer,4096);
 
@@ -97,12 +100,12 @@ writesect(void *src, int offset) {
 }
 /* 将位于磁盘offset位置的count字节数据读入物理地址pa */
 void
-readseg(unsigned char *va, int count, int offset) {
+readseg(unsigned char *va, int count, int offset,int diskoff) {
 	unsigned char *eva;
 	eva = va + count;
 	va -= offset % SECTSIZE;
 	//set game at 201 in Makefile
-	offset = (offset / SECTSIZE) + 201;
+	offset = (offset / SECTSIZE) + diskoff+1;
 	for(; va < eva; va += SECTSIZE, offset ++)
 		readsect(va, offset);
 }

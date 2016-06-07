@@ -8,13 +8,14 @@
 #include"include/semaphore.h"
 #include"include/memlayout.h"
 #include"kernel/process/env.h"
+#include"include/env.h"
+#include"include/disk.h"
 
 #include "include/mmu.h"
 extern pde_t entry_pgdir[];
 void init_cond();
 void init_segment();
 void init_mem();
-void* loader();
 int kernel_main(){
 	page_init();
 	init_cond();
@@ -31,11 +32,15 @@ void init_cond(){
 	init_mem();
 	init_semaphore();
 	readsect((void*)directory_d.entries,201+256);
+	printk("filename=%s\n",directory_d.entries[0].filename);
+	kern_env.file[0].opened=true;
+	kern_env.file[0].offset=0;
+	curenv=&kern_env;
 	set_timer_intr_handler(kernel_timer_event);
-	asm volatile("cli");
+	//asm volatile("cli");
 	//asm volatile("int $14");
 	env_init();
-	env_create();
+	env_create(200,0,ENV_TYPE_USER);
 	env_run(&envs[0]);
 	/*printk("snvs0.ts=%x\n",&envs[0]);
 	struct TrapFrame tf;

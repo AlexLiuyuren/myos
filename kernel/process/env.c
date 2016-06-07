@@ -1,4 +1,3 @@
-#include "include/env.h"
 #include "include/mmu.h"
 #include "include/boot.h"
 #include "include/memlayout.h"
@@ -11,6 +10,7 @@
 #include "include/mmu2.h"
 #include "include/env.h"
 #include "include/string.h"
+#include "include/disk.h"
 #include "kernel/process/env.h"
 struct Env ENVS[NENV];
 struct Env* envs=ENVS;
@@ -191,7 +191,7 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 	unsigned char pagebuffer[4096];
 	
 	elf=(struct ELFHeader*)env_buffer;
-	readseg((unsigned char *)elf,4096,0);
+	readseg((unsigned char *)elf,4096,0,200);
 	//printk("elfentry=%x\n",elf->entry);
 
 	ph=(struct ProgramHeader*)((char*)elf+elf->phoff);
@@ -207,7 +207,7 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 				struct PageInfo*page=page_alloc(1);
 				page_insert(entry_pgdir,page,(void*)va,PTE_U|PTE_W);
 				int n=(4096-offset)>ph->memsz?ph->memsz:(4096-offset);
-				readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded);
+				readseg((unsigned char*)(pagebuffer+offset),n,ph->off+data_loaded,200);
 				memcpy((void *)page2kva(page),pagebuffer,4096);
 				va+=4096;
 				data_loaded+=n;
@@ -221,15 +221,16 @@ static void load_icode(struct Env*e,pde_t *entry_pgdir){
 	region_alloc(e,(void*)(USTACKTOP-1024*PGSIZE),1024*PGSIZE);
 }
 
-void env_create(){
+void env_create(int diskoff,size_t size,enum EnvType type){
 	struct Env *penv;
 	env_alloc(&penv,0);
-	struct PageInfo *page=page_alloc(1);
+	loader(penv,diskoff);
+	/*struct PageInfo *page=page_alloc(1);
 	uint32_t cr3_game=page2pa(page);
 	pde_t *pgdir_game=page2kva(page);
 	memcpy(pgdir_game,entry_pgdir,4096);
 	load_icode(penv,pgdir_game);
-	lcr3(cr3_game);
+	lcr3(cr3_game);*/
 }
 
 void env_free(struct Env* e){

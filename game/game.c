@@ -1,6 +1,7 @@
 #include "include/string.h"
 #include "include/x86.h"
 #include "include/video.h"
+#include "include/fs.h"
 #include "include/game.h"
 #include "include/keyboard.h"
 #include "include/timer.h"
@@ -97,3 +98,29 @@ void exit_test(){
 	while(1);
 }
 
+
+int fs_test(){
+	printg("game start\n");	
+	int fp1=open("poem1.txt",0);
+	char poem[10][30];
+	int i;
+	for(i=0;i<4;i++){
+		read(fp1,(void*)poem[i],30);
+		printg("%s\n",poem[i]);
+	}
+	close(fp1);
+	int fp2=open("poem2.txt",0);
+	for(i=0;i<4;i++){
+		 write(fp2,(void*)poem[i],30);
+	}
+	memset(poem,0,sizeof(poem));
+	frewind(fp2);
+	for(i=0;i<4;i++){
+		read(fp2,(void*)poem[i],30);
+		printg("%s\n",poem[i]);
+	}
+	close(fp2);
+	printg("game over nice job");
+	while(1);
+	return 0;
+ }
