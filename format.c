@@ -91,7 +91,7 @@ int main(int argc,char *argv[]){
 		rewind(disk);
 		fclose(fp);
 	}
-	fseek(disk,512*216,SEEK_SET);
+	fseek(disk,512*256,SEEK_SET);
 	fwrite(directory_d.entries,1,512,disk);
 	rewind(disk);
 	fseek(disk,0,SEEK_SET);

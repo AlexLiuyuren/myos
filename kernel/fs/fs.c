@@ -33,6 +33,7 @@ int fs_read(int fd, void *buf, int len)
 		//first we should read inode
 		struct inode node;
 		unsigned int ioff=directory_d.entries[fd].inode_offset;
+		//printk("ioff=%x\n",ioff);
 		readsect((void*)node.data_block_offsets,ioff+201);
 		int length=min(len,directory_d.entries[fd].file_size-curenv->file[fd].offset);
 		unsigned int begin=curenv->file[fd].offset/512;
