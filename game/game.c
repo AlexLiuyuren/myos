@@ -127,3 +127,15 @@ int fs_test(){
 	while(1);
 	return 0;
  }
+
+int test_fp2(){
+	int fp=open("poem2.txt",0);
+	char poem[10][30];
+	int i;
+	for(i=0;i<4;i++){
+		read(fp,(void*)poem[i],30);
+		printg("%s\n",poem[i]);
+	}
+	while(1);
+	return -1;
+}
